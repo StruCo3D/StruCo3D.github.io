@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <link rel="icon" type="image/png" href="data/logo_icon.png">
+    <title>ICCV21 StruCo3D Workshop</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link href="data/default.css" rel="stylesheet" type="text/css" />
+    <meta property='og:title' content='ICCV21 StruCo3D Workshop: Structural and Compositional Learning on 3D Data'/>
+    <meta property='og:url' content='https://StruCo3D.github.io/ICCV2021' />
+    <meta property='og:image' content='https://StruCo3D.github.io/ICCV2021/data/logo_full.png' />
+    <meta property="og:type" content="website" />
+  </head>
+
+  <body>
+    <div id="header">
+      <div id="logo">
+	<h1>
+		<center>
+	    	 <span style="font-size:50%;color:#777;font-weight:normal">The first Workshop on</span><br>
+             Structural and Compositional Learning on 3D Data
+		</center>
+	</h1><br>
+	<h2>
+		<center>
+      <span style="font-size:92%;color:#777;font-weight:normal">October 16 @ 
+          <a href="http://iccv2021.thecvf.com">ICCV 2021</a> 
+      <span style="font-size:92%;color:#777;font-weight:bold">Virtual</span>
+		</center>
+	</h2><br>
+    <center><img src="data/logo_mid.png" alt="" width="380"/></center>
+	</div>
+
+  <div id="menu">
+    <center>
+      <ul>
+        <li class="first"><a href="./index.html" accesskey="1">Home</a></li>
+      </ul>
+    </center>
+</div>
+
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              mybutton.style.display = "block";
+                } else {
+                        mybutton.style.display = "none";
+                          }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+      document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+}
+</script>
+
+<div id="content">
+
+<h2>Submission Scope</h2>
+<p>
+We welcome submissions from broad research fields (e.g. computer vision, computer graphics, robotics, etc.) that involves representing 3D data with structural or compositional representations, leveraging explicit or implicit 3D data structure for various applications, proposing compositional algorithms to better take advantages of task structures, emerging 3D compositionality and structure from data, proposing 3D structural and compositional datasets, etc.
+</p>
+<p>
+To give a few examples, your submission can address one or some of the following questions:
+</p>
+<p>
+<ul>
+    <li>Which types of structure should we use for different tasks and applications in graphics, vision and robotics?</li>
+    <li>How should we factorize a given problem into sparse concepts that make up the structure?</li>
+    <li>How should we factorize different types of 3D data into sparse sets of components, relationships, or operators?</li>
+    <li>Which algorithms are best suited for a given type of structure?</li>
+    <li>How should we mix structural and non-structural approaches?</li>
+    <li>Which parts of a problem are suited for structural approaches, and which ones are better handled without structure?</li>
+</ul>
+</p>
+<p>
+Some example topics include but are not limited to:
+</p>
+<p>
+    1) Different kinds of structure and compositionality for 3D data:
+    <ul>
+        <li>3D shape primitives, programs, grammars, symbolic representations, etc;</li>
+        <li>3D scene graphs, hierarchies, symbolic programs, topological maps, etc;</li>
+        <li>Implicit data structure, such as mixtures of Gaussians, sets of primitives, sets of keypoints, etc.</li>
+        <li>Compositional task structures, such as reasoning over subtasks, executing planners over task spaces, etc;</li>
+    </ul>
+</p>
+<p>
+    2) Approaches to embed structured data:
+    <ul>
+        <li>Graph-based methods: graph neural networks (GNN), factor graphs, etc;</li>
+        <li>Sequential methods: recurrent neural networks (RNN), transformers, etc;</li>
+        <li>Hierarchical methods: recursive neural networks (RvNN), And-or-graphs (AOG), etc;</li>
+        <li>Neuro-symbolic methods: program embedding, probabilistic grammar learning, etc.</li>
+    </ul>
+<p>
+    3) Methods to discover structure and compositionality:
+    <ul>
+        <li>Component factorization by using various task priors, such as convexity of object parts;</li>
+        <li>Fitting a probabilistic grammar or parametric template to the data;</li>
+        <li>Concept discovery by dimension reduction, sparse encoding, or disentanglement learning techniques;</li>
+        <li>Compositional task space discovery by few shots of human annotations or demonstrations;</li>
+        <li>Modularized method designs for compositional generalizability, or explainable method structures.</li>
+    </ul>
+</p>
+<p>
+    4) Different areas of applications:
+    <ul>
+        <li>Recognition, segmentation and detection for visual perception tasks;</li>
+        <li>Generation, editing and reconstruction for visual synthesis tasks;</li>
+        <li>Manipulation, planning and navigation for robotic perception and learning tasks.</li>
+    </ul>
+</p>
+	
+
+<h2 id="cfp">Call for Papers</h2>
+<p>
+We accept both archival full paper (up to 8 pages) and non-archival short paper (up to 4 pages) submissions. Every accepted paper will have the opportunity to give a 10-min spotlight presentation and host two 30-min poster sessions (12-hours separated).
+</p>
+<h3>Submission Cite: <a href="https://cmt3.research.microsoft.com/StruCo3D2021" target="_blank">https://cmt3.research.microsoft.com/StruCo3D2021</a></h3><br>
+<h3>Submission Tracks:</h3>
+<ul>
+    <li><b>Archival Full Paper (up to 8 pages excluding references):</b> Accepted papers will be officially published in ICCV workshop proceedings and will be archived in IEEE Xplore and CVF open access archive.</li>
+    <li><b>Non-archival Full Paper (up to 4 pages excluding references):</b> Accepted papers will NOT be considered published and thus will NOT be subject to dual submission policies at other conferences. Accepted papers in this track will be posted on the workshop website ONLY, unless authors have special requests. We also welcome already published papers to present in this workshop if you would like to share it to our audience.</li>
+</ul>
+<h3>Submission Instructions:</h3>
+<ul>
+    <li><b>Paper Template:</b> Please use the <a href="http://iccv2021.thecvf.com/node/4#submission-guidelines" target="_blank">official ICCV template</a> for your submissions. Make sure to anonymize your submission.</li>
+    <li><b>Select a Track:</b> Please correctly select your desired submission track at the time of submission.</li>
+    <li><b>Paper Review:</b> Every paper will be peer-reviewed by 2-3 program committee members.</li>
+    <li><b>Questions:</b> Please contact us by email if you have questions.</li>
+</ul>
+<h3>Timeline Table (11:59 PM Pacific Time)</h3>
+<ul>
+    <li>Monday, July 26: Paper submission deadline</li>
+    <li>Monday, Aug 9: Review deadline and decision announced to authors</li>
+    <li>Monday, Aug 16: Camera ready deadline</li>
+</ul>
+</p>
+
+
+<h2 id="contact">Program Committee</h2>
+<ul>
+    <li>Mika Uy (Stanford)</li>
+    <li>Ian Huang (Stanford)</li>
+    <li>Li Yi (Tsinghua)</li>
+    <li>Zhenyu Jiang (UT Austin)</li>
+    <li>Minghua Liu (UCSD)</li>
+    <li>Jiayuan Gu (UCSD)</li>
+    <li>Tiange Luo (UCSD)</li>
+    <li>Jie Yang (Chinese Academy of Sciences)</li>
+    <li>Kenny Jones (Brown)</li>
+    <li>Xianghao Xu (Brown)</li>
+    <li>Wamiq Para (KAUST)</li>
+    <li>Nilesh Kulkarni (University of Michigan)</li>
+    <li>Yufei Ye (CMU)</li>
+</ul>
+</p>
+
+
+
+<h2 id="contact">Contact Info</h2>
+<p>E-mail: 
+<a href="mailto:struco3d@googlegroups.com" target="_blank">struco3d@googlegroups.com</a> or 
+<a href="mailto:kaichun@cs.stanford.edu" target="_blank">kaichun@cs.stanford.edu</a>
+</p>
+
+<h2 id="contact">Acknowledgements</h2>
+<p>Website template borrowed from: 
+<a href="https://futurecv.github.io/" target="_blank">https://futurecv.github.io/</a>
+(Thanks to <a href="https://www.cs.cmu.edu/~dpathak/" target="_blank">Deepak Pathak</a>)
+</p>
+
+
+<div style="clear: both;">&nbsp;</div>
+</div><br><br>
+
+</body>
+</html>

@@ -1,0 +1,685 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <link rel="icon" type="image/png" href="data/logo_icon.png">
+    <title>ICCV21 StruCo3D Workshop</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link href="data/default.css" rel="stylesheet" type="text/css" />
+    <meta property='og:title' content='ICCV21 StruCo3D Workshop: Structural and Compositional Learning on 3D Data'/>
+    <meta property='og:url' content='https://StruCo3D.github.io/ICCV2021' />
+    <meta property='og:image' content='https://StruCo3D.github.io/ICCV2021/data/logo_full.png' />
+    <meta property="og:type" content="website" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function moreOrLess(tableData) {
+            obj = tableData.find("span");
+            button = tableData.find("button");
+            console.log(obj.hasClass("hidden"))
+            if (obj.hasClass("hidden")) {
+                obj.slideDown("fast");
+                obj.removeClass("hidden");
+                button.html("Hide Abstract");
+            } else {
+                obj.slideUp("fast");
+                obj.addClass("hidden");
+                button.html("Show Abstract");
+            }
+        }
+    </script>
+</head>
+
+
+  <body>
+    <div id="header">
+      <div id="logo">
+	<h1>
+		<center>
+	    	 <span style="font-size:50%;color:#777;font-weight:normal">The first Workshop on</span><br>
+             Structural and Compositional Learning on 3D Data
+		</center>
+	</h1><br>
+	<h2>
+		<center>
+      <span style="font-size:92%;color:#777;font-weight:normal">October 16 @ 
+          <a href="http://iccv2021.thecvf.com" target="_blank">ICCV 2021</a> 
+      <span style="font-size:92%;color:#777;font-weight:bold">Virtual</span>
+		</center>
+	</h2><br>
+    <center><img src="data/logo_mid.png" alt="" width="380"/></center>
+	</div>
+  
+    <div id="menu">
+    <center>
+      <ul>
+        <li class="first"><a href="./index.html" accesskey="1">Home</a></li>
+      </ul>
+    </center>
+</div>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              mybutton.style.display = "block";
+                } else {
+                        mybutton.style.display = "none";
+                          }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+      document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+}
+</script>
+
+        <div id="content">
+            <h2>Archival Workshop Publications <a href="https://openaccess.thecvf.com/ICCV2021_workshops/StruCo3D" target="_blank">[CVF Official Archive]</a></h2>
+            <table>
+                <tr class="row_type_A">
+                    <td width="20px" , class="paper_id">1</td>
+                    <td width="200px">
+                        <div style="text-align: center;">
+                            <strong><span class="author">Pinak Paliwal, Vikas Paliwal</span></strong>
+                            14D Systems Inc. and UC Berkeley
+                        </div>
+                        <div style="text-align: center;">
+                            <a href="https://openaccess.thecvf.com/content/ICCV2021W/StruCo3D/papers/Paliwal_3D_Scene_Angles_Using_UL_Decomposition_of_Planar_Homography_ICCVW_2021_paper.pdf" target="_blank">[PDF]</a>
+                            <a href="https://youtu.be/w8TrGLVWRmA" target="_blank">[Video]</a>
+                        </div>
+                        <div style="text-align: center; color:red; font-size:150%;">
+                            Poster Session 1
+                        </div>
+                    </td>
+                    <td id="paper01">
+                        <p class="poster_title">3D Scene Angles using UL Decomposition of Planar Homography
+                        </p>
+                        <span class="hidden">
+                            <p><strong>Abstract:</strong>
+                            Proctoring during online exams often requires students to be under surveillance from a side pose and there is a strong need to estimate the side camera’s relative position with respect to student’s computer screen. This work uses edge and line detectors to extract the computer screen’s boundaries and estimates homography with respect to rectangular shape with corresponding aspect ratio as in a normal view. A novel Upper-Lower Decomposition of Homography (ULDH) algorithm is proposed that calculates the polar and azimuthal angles with less than 5-degree mean errors and can help distinguish bad camera placements from good ones with good precision. A purpose-built dataset is created and validated for this purpose and the software for key parts of image processing pipeline is made available for remote proctoring purposes.
+                            </p>
+                        </span>
+                        <div style="text-align: center;">
+                            <button onclick="moreOrLess($('#paper01'))">Show Abstract</button>
+                        </div>
+                    </td>
+                </tr>
+                                
+                <tr class="row_type_B">
+                    <td width="20px" , class="paper_id">2</td>
+                    <td width="200px">
+                        <div style="text-align: center;">
+                            <strong><span class="author">Rinon Gal, Amit H Bermano, Hao Zhang, Danny Cohen-Or</span></strong>
+                            Tel Aviv University, Simon Fraser University
+                        </div>
+                        <div style="text-align: center;">
+                            <a href="https://openaccess.thecvf.com/content/ICCV2021W/StruCo3D/papers/Gal_MRGAN_Multi-Rooted_3D_Shape_Representation_Learning_With_Unsupervised_Part_Disentanglement_ICCVW_2021_paper.pdf" target="_blank">[PDF]</a>
+                            <a href="https://openaccess.thecvf.com/content/ICCV2021W/StruCo3D/supplemental/Gal_MRGAN_Multi-Rooted_3D_ICCVW_2021_supplemental.pdf" target="_blank">[Supp]</a>
+                            <a href="https://youtu.be/aHQ6KRIjWKY" target="_blank">[Video]</a>
+                        </div>
+                        <div style="text-align: center; color:red; font-size:150%;">
+                            Poster Session 1 & 2
+                        </div>
+                    </td>
+                    <td id="paper02">
+                        <p class="poster_title">
+                        MRGAN: Multi-Rooted 3D Shape Representation Learning with Unsupervised Part Disentanglement
+                        </p>
+                        <span class="hidden">
+                            <p><strong>Abstract:</strong>
+We introduce MRGAN, multi-rooted GAN, the first generative adversarial network to learn a part-disentangled 3D
+shape representation without any part supervision. The network fuses multiple branches of tree-structured graph convolution layers which produce point clouds in a controllable
+manner. Specifically, each branch learns to grow a different
+shape part, offering control over the shape generation at
+the part level. Our network encourages disentangled generation of semantic parts via two key ingredients: a rootmixing training strategy which helps decorrelate the different branches to facilitate disentanglement, and a set of
+loss terms designed with part disentanglement and shape
+semantics in mind. Of these, a novel convexity loss incentivizes the generation of parts that are more convex, as semantic parts tend to be. In addition, a root-dropping loss
+further ensures that each root seeds a single part, preventing the degeneration or over-growth of the point-producing
+branches. We evaluate the performance of our network on
+a number of 3D shape classes, and offer qualitative and
+quantitative comparisons to previous works and baseline
+approaches. We demonstrate the controllability offered by
+our part-disentangled representation through two applications for shape modeling: part mixing and individual part
+variation, without receiving segmented shapes as input.
+                            </p>
+                        </span>
+                        <div style="text-align: center;">
+                            <button onclick="moreOrLess($('#paper02'))">Show Abstract</button>
+                        </div>
+                    </td>
+                </tr>
+                 
+                <tr class="row_type_A">
+                    <td width="20px" , class="paper_id">3</td>
+                    <td width="200px">
+                        <div style="text-align: center;">
+                            <strong><span class="author">Siddharth Katageri, Shashidhar V Kudari, Akshaykumar Gunari, Ramesh Tabib, Uma Mudenagudi</span></strong>
+                            KLE Technological University
+                        </div>
+                        <div style="text-align: center;">
+                            <a href="https://openaccess.thecvf.com/content/ICCV2021W/StruCo3D/papers/Katageri_ABD-Net_Attention_Based_Decomposition_Network_for_3D_Point_Cloud_Decomposition_ICCVW_2021_paper.pdf" target="_blank">[PDF]</a>
+                            <a href="https://youtu.be/19FTFtKCRFs" target="_blank">[Video]</a>
+                        </div>
+                        <div style="text-align: center; color:red; font-size:150%;">
+                            Poster Session 1 & 2
+                        </div>
+                    </td>
+                    <td id="paper03">
+                        <p class="poster_title">
+                        ABD-Net: Attention Based Decomposition Network for 3D Point Cloud Decomposition
+                        </p>
+                        <span class="hidden">
+                            <p><strong>Abstract:</strong>
+                            In this paper, we propose Attention Based Decomposition Network (ABD-Net), for point cloud decomposition into
+                            basic geometric shapes namely, plane, sphere, cone and
+                            cylinder. We show improved performance of 3D object classification using attention features based on primitive shapes
+                            in point clouds. Point clouds, being the simple and compact
+                            representation of 3D objects have gained increasing popularity. They demand robust methods for feature extraction
+                            due to unorderness in point sets. In ABD-Net the proposed
+                            Local Proximity Encapsulator captures the local geometric
+                            variations along with spatial encoding around each point
+                            from the input point sets. The encapsulated local features
+                            are further passed to proposed Attention Feature Encoder
+                            to learn basic shapes in point cloud. Attention Feature Encoder models geometric relationship between the neighborhoods of all the points resulting in capturing global point
+                            cloud information. We demonstrate the results of our proposed ABD-Net on ANSI mechanical component and ModelNet40 datasets. We also demonstrate the effectiveness of
+                            ABD-Net over the acquired attention features by improving
+                            the performance of 3D object classification on ModelNet40
+                            benchmark dataset and compare them with state-of-the-art
+                            techniques.
+                            </p>
+                        </span>
+                        <div style="text-align: center;">
+                            <button onclick="moreOrLess($('#paper03'))">Show Abstract</button>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+               
+                 
+            <h2>Non-archival Short Presentations</h2>
+            <table>
+                <tr class="row_type_A">
+                    <td width="20px" , class="paper_id">4</td>
+                    <td width="200px">
+                        <div style="text-align: center;">
+                            <strong><span class="author">Jianglong Ye, Yuntao Chen, Naiyan Wang, Xiaolong Wang</span></strong>
+                            TuSimple, Chinese Academy of Sciences, UCSD
+                        </div>
+                        <div style="text-align: center;">
+                            <a href="./papers/04.pdf" target="_blank">[PDF]</a>
+                            <a href="https://youtu.be/4aEANKxzrNM" target="_blank">[Video]</a>
+                        </div>
+                        <div style="text-align: center; color:red; font-size:150%;">
+                            Poster Session 2
+                        </div>
+                    </td>
+                    <td id="paper04">
+                        <p class="poster_title">
+                        Online Adaptation for Implicit Object Tracking and Shape Reconstruction in the Wild
+                        </p>
+                        <span class="hidden">
+                            <p><strong>Abstract:</strong>
+                            Tracking and reconstructing 3D objects from cluttered
+                            scenes are the key components for computer vision, robotics
+                            and autonomous driving systems. While recent progress in
+                            implicit function (e.g., DeepSDF) has shown encouraging
+                            results on high-quality 3D shape reconstruction, it is still
+                            very challenging to generalize to cluttered and partially observable LiDAR data. In this paper, we propose to leverage
+                            the continuity in video data. We introduce a novel and unified framework which utilizes a DeepSDF model to simultaneously perform object tracking and 3D reconstruction in
+                            the wild. We perform online adaptation with the DeepSDF
+                            model in the video, iteratively improving the shape reconstruction which leads to improvement on tracking, and vice
+                            versa. We experiment with the Waymo dataset, and show
+                            significant improvements over state-of-the-art methods for
+                            both tracking and shape reconstruction.
+                            </p>
+                        </span>
+                        <div style="text-align: center;">
+                            <button onclick="moreOrLess($('#paper04'))">Show Abstract</button>
+                        </div>
+                    </td>
+                </tr>
+                 
+                <tr class="row_type_B">
+                    <td width="20px" , class="paper_id">5</td>
+                    <td width="200px">
+                        <div style="text-align: center;">
+                            <strong><span class="author">Rishabh Baghel, Abhishek Trivedi, Tejas Ravichandran, Ravi Kiran Sarvadevabhatla</span></strong>
+                            IIIT Hyderabad
+                        </div>
+                        <div style="text-align: center;">
+                            <a href="./papers/05.pdf" target="_blank">[PDF]</a>
+                            <a href="https://youtu.be/ITLNl3Gxjzs" target="_blank">[Video]</a>
+                        </div>
+                        <div style="text-align: center; color:red; font-size:150%;">
+                            Poster Session 1 & 2
+                        </div>
+                    </td>
+                    <td id="paper05">
+                        <p class="poster_title">
+                        MeronymNet: A Unified Framework for Part and Category Controllable Generation of Objects
+                        </p>
+                        <span class="hidden">
+                            <p><strong>Abstract:</strong>
+                            We introduce MeronymNet, a novel hierarchical approach for controllable, part-based generation of multicategory objects using a single unified model. We adopt a
+                            guided coarse-to-fine strategy involving semantically conditioned generation of bounding box layouts, pixel-level
+                            part layouts and ultimately, the object depictions. We use
+                            Graph Convolutional Networks, Deep Recurrent Networks
+                            along with custom-designed Conditional Variational Autoencoders to enable flexible, diverse and category-aware
+                            generation of 2-D objects in a controlled manner. The performance scores and generations reflect MeronymNet’s superior performance compared to scene generation baselines and ablative variants.
+                            </p>
+                        </span>
+                        <div style="text-align: center;">
+                            <button onclick="moreOrLess($('#paper05'))">Show Abstract</button>
+                        </div>
+                    </td>
+                </tr>
+               
+ 
+                <tr class="row_type_A">
+                    <td width="20px" , class="paper_id">6</td>
+                    <td width="200px">
+                        <div style="text-align: center;">
+                            <strong><span class="author">Jiashun Wang, Huazhe Xu, Medhini Narasimhan, Xiaolong Wang</span></strong>
+                            UCSD, UC Berkeley
+                        </div>
+                        <div style="text-align: center;">
+                            <a href="./papers/06.pdf" target="_blank">[PDF]</a>
+                            <a href="https://youtu.be/TN2ZzE3o-ko" target="_blank">[Video]</a>
+                        </div>
+                        <div style="text-align: center; color:red; font-size:150%;">
+                            Poster Session 2
+                        </div>
+                    </td>
+                    <td id="paper06">
+                        <p class="poster_title">
+                        Multi-Person 3D Motion Prediction with Multi-Range Transformers
+                        </p>
+                        <span class="hidden">
+                            <p><strong>Abstract:</strong>
+                            We propose a novel framework for multi-person 3D motion trajectory prediction. Our key observation is that
+                            a human’s action and behaviors may highly depend on
+                            the other persons around. Thus, instead of predicting
+                            each human pose trajectory in isolation, we introduce a
+                            Multi-Range Transformer model which contains of a localrange encoder for individual motion and a global-range
+                            encoder for social interactions. The Transformer decoder
+                            then performs prediction for each person by taking a corresponding pose as a query which attends to both local
+                            and global-range encoder features. Our model not only
+                            outperforms state-of-the-art methods on long-term 3D motion prediction, but also generates diverse social interactions. More interestingly, our model can even predict 15-
+                            person motion simultaneously by automatically dividing
+                            the persons into different interaction groups.
+                            </p>
+                        </span>
+                        <div style="text-align: center;">
+                            <button onclick="moreOrLess($('#paper06'))">Show Abstract</button>
+                        </div>
+                    </td>
+                </tr>
+                 
+                <tr class="row_type_B">
+                    <td width="20px" , class="paper_id">7</td>
+                    <td width="200px">
+                        <div style="text-align: center;">
+                            <strong><span class="author">Yuzhe Qin, Yueh-Hua Wu, Shaowei Liu, Hanwen Jiang, Ruihan Yang, Yang Fu, Xiaolong Wang</span></strong>
+                            UCSD, National Taiwan University / Academia Sinica, UIUC
+                        </div>
+                        <div style="text-align: center;">
+                            <a href="./papers/07.pdf" target="_blank">[PDF]</a>
+                            <a href="https://youtu.be/ce3-dyQpZAI" target="_blank">[Video]</a>
+                        </div>
+                        <div style="text-align: center; color:red; font-size:150%;">
+                            Poster Session 2
+                        </div>
+                    </td>
+                    <td id="paper07">
+                        <p class="poster_title">
+                        DexMV: Imitation Learning for Dexterous Manipulation from Human Videos
+                        </p>
+                        <span class="hidden">
+                            <p><strong>Abstract:</strong>
+                            While significant progress has been made on understanding hand-object interactions in computer vision, it is still
+                            very challenging for robots to perform complex dexterous
+                            manipulation. In this paper, we propose a new platform and
+                            pipeline, DexMV (Dexterous Manipulation from Videos),
+                            for imitation learning to bridge the gap between computer
+                            vision and robot learning. We design a platform with: (i) a
+                            simulation system for complex dexterous manipulation tasks
+                            with a multi-finger robot hand and (ii) a computer vision
+                            system to record large-scale demonstrations of a human
+                            hand conducting the same tasks. In our new pipeline, we
+                            extract 3D hand and object poses from the videos, and convert them to robot demonstrations via motion retargeting.
+                            We then apply and compare multiple imitation learning algorithms with the demonstrations. We show that the demonstrations can indeed improve robot learning by a large margin and solve the complex tasks.
+                            </p>
+                        </span>
+                        <div style="text-align: center;">
+                            <button onclick="moreOrLess($('#paper07'))">Show Abstract</button>
+                        </div>
+                    </td>
+                </tr>
+               
+ 
+                <tr class="row_type_A">
+                    <td width="20px" , class="paper_id">8</td>
+                    <td width="200px">
+                        <div style="text-align: center;">
+                            <strong><span class="author">Hanwen Jiang, Shaowei Liu, Jiashun Wang, Xiaolong Wang</span></strong>
+                        UCSD
+                        </div>
+                        <div style="text-align: center;">
+                            <a href="./papers/08.pdf" target="_blank">[PDF]</a>
+                            <a href="https://youtu.be/NXP-cKphYq0" target="_blank">[Video]</a>
+                        </div>
+                        <div style="text-align: center; color:red; font-size:150%;">
+                            Poster Session 1 & 2
+                        </div>
+                    </td>
+                    <td id="paper08">
+                        <p class="poster_title">
+                        Hand-Object Contact Consistency Reasoning for Human Grasps Generation
+                        </p>
+                        <span class="hidden">
+                            <p><strong>Abstract:</strong>
+                            While predicting robot grasps with parallel jaw grippers
+                            have been well studied and widely applied in robot manipulation tasks, the study on natural human grasp generation with
+                            a multi-finger hand remains a very challenging problem. In
+                            this paper, we propose to generate human grasps given a 3D
+                            object in the world. Our key observation is that it is crucial
+                            to model the consistency between the hand contact points
+                            and object contact regions. That is, we encourage the prior
+                            hand contact points to be close to the object surface and the
+                            object common contact regions to be touched by the hand at
+                            the same time. Based on the hand-object contact consistency,
+                            we design novel objectives in training the human grasp generation model and also a new self-supervised task which
+                            allows the grasp generation network to be adjusted even during test time. Our experiments show significant improvement
+                            in human grasp generation over state-of-the-art approaches
+                            by a large margin. More interestingly, by optimizing the
+                            model during test time with the self-supervised task, it helps
+                            achieve larger gain on unseen and out-of-domain objects
+                            </p>
+                        </span>
+                        <div style="text-align: center;">
+                            <button onclick="moreOrLess($('#paper08'))">Show Abstract</button>
+                        </div>
+                    </td>
+                </tr>
+                 
+                <tr class="row_type_B">
+                    <td width="20px" , class="paper_id">9</td>
+                    <td width="200px">
+                        <div style="text-align: center;">
+                            <strong><span class="author">Jiteng Mu, Weichao Qiu, Adam Kortylewski, Alan Yuille, Nuno Vasconcelos, Xiaolong Wang</span></strong>
+                            UCSD, Johns Hopkins University
+                        </div>
+                        <div style="text-align: center;">
+                            <a href="./papers/09.pdf" target="_blank">[PDF]</a>
+                            <a href="https://youtu.be/mpLr78yX9i0" target="_blank">[Video]</a>
+                        </div>
+                        <div style="text-align: center; color:red; font-size:150%;">
+                            Poster Session 1 & 2
+                        </div>
+                    </td>
+                    <td id="paper09">
+                        <p class="poster_title">
+                        A-SDF: Learning Disentangled Signed Distance Functions for Articulated Shape Representation
+                        </p>
+                        <span class="hidden">
+                            <p><strong>Abstract:</strong>
+                            Recent work has made significant progress on using implicit functions, as a continuous representation for 3D rigid
+                            object shape reconstruction. However, much less effort has
+                            been devoted to modeling general articulated objects. Compared to rigid objects, articulated objects have higher degrees of freedom, which makes it hard to generalize to unseen shapes. To deal with the large shape variance, we
+                            introduce Articulated Signed Distance Functions (A-SDF)
+                            to represent articulated shapes with a disentangled latent
+                            space, where we have separate codes for encoding shape
+                            and articulation. With this disentangled continuous representation, we demonstrate that we can control the articulation input and animate unseen instances with unseen
+                            joint angles. Furthermore, we propose a Test-Time Adaptation inference algorithm to adjust our model during inference. We demonstrate our model generalize well to out-ofdistribution and unseen data, e.g., partial point clouds and
+                            real-world depth images.
+                            </p>
+                        </span>
+                        <div style="text-align: center;">
+                            <button onclick="moreOrLess($('#paper09'))">Show Abstract</button>
+                        </div>
+                    </td>
+                </tr>
+                 
+                <tr class="row_type_A">
+                    <td width="20px" , class="paper_id">10</td>
+                    <td width="200px">
+                        <div style="text-align: center;">
+                            <strong><span class="author">Alexey Bokhovkin, Vladislav Ishimtsev, Emil Bogomolov, Denis Zorin, Alexey Artemov, Evgeny Burnaev, Angela Dai</span></strong>
+                            TUM, Skoltech, NYU
+                        </div>
+                        <div style="text-align: center;">
+                            <a href="./papers/10.pdf" target="_blank">[PDF]</a>
+                            <a href="https://youtu.be/RO7ivckYj6E" target="_blank">[Video]</a>
+                        </div>
+                        <div style="text-align: center; color:red; font-size:150%;">
+                            Poster Session 1
+                        </div>
+                    </td>
+                    <td id="paper10">
+                        <p class="poster_title">
+                        Towards Part-Based Understanding of RGB-D Scans
+                        </p>
+                        <span class="hidden">
+                            <p><strong>Abstract:</strong>
+                            Recent advances in 3D semantic scene understanding
+                            have shown impressive progress in 3D instance segmentation, enabling object-level reasoning about 3D scenes; however, a finer-grained understanding is required to enable
+                            interactions with objects and their functional understanding.
+                            Thus, we propose the task of part-based scene understanding of real-world 3D environments: from an RGB-D scan
+                            of a scene, we detect objects, and for each object predict
+                            its decomposition into geometric part masks, which composed together form the complete geometry of the observed
+                            object. We leverage an intermediary part graph representation to enable robust completion as well as building of
+                            part priors, which we use to construct the final part mask
+                            predictions. Our experiments demonstrate that guiding part
+                            understanding through part graph to part prior-based predictions significantly outperforms alternative approaches to
+                            the task of semantic part completion.
+                            </p>
+                        </span>
+                        <div style="text-align: center;">
+                            <button onclick="moreOrLess($('#paper10'))">Show Abstract</button>
+                        </div>
+                    </td>
+                </tr>
+                 
+                <tr class="row_type_B">
+                    <td width="20px" , class="paper_id">11</td>
+                    <td width="200px">
+                        <div style="text-align: center;">
+                            <strong><span class="author">
+                                   Yining Hong, Qing Li, Song-Chun Zhu, Siyuan Huang
+                                </span></strong>
+                                UCLA, Beijing Institute for General Artificial Intelligence, Tsinghua University, Peking University
+                        </div>
+                        <div style="text-align: center;">
+                            <a href="./papers/11.pdf" target="_blank">[PDF]</a>
+                            <a href="https://youtu.be/KpDgzmCQZb0" target="_blank">[Video]</a>
+                        </div>
+                        <div style="text-align: center; color:red; font-size:150%;">
+                            Poster Session 1 & 2
+                        </div>
+                    </td>
+                    <td id="paper11">
+                        <p class="poster_title">
+                        VLGrammar: Grounded Grammar Induction of Vision and Language
+                        </p>
+                        <span class="hidden">
+                            <p><strong>Abstract:</strong>
+                            While grammar is an essential representation of natural
+                            language, it also exists ubiquitously in vision to represent
+                            the hierarchical part-whole structure. In this work, we study
+                            grounded grammar induction of vision and language in a
+                            joint learning framework. Specifically, we present VLGrammar, a method that uses compound probabilistic contextfree grammars (compound PCFGs) to induce the language
+                            grammar and the image grammar simultaneously. We propose a novel contrastive learning framework to guide the
+                            joint learning of both modules. We collect a large-scale
+                            dataset, PARTIT, which contains human-written sentences
+                            that describe part-level semantics for 3D objects. Experiments on the PARTIT dataset show that VLGrammar outperforms all baselines in image grammar induction and language grammar induction. The learned VLGrammar naturally benefits related downstream tasks. Specifically, it improves the image unsupervised clustering accuracy by 30%,
+                            and performs well in image retrieval and text retrieval. Notably, the induced grammar shows superior generalizability
+                            by easily generalizing to unseen categories.
+                            </p>
+                        </span>
+                        <div style="text-align: center;">
+                            <button onclick="moreOrLess($('#paper11'))">Show Abstract</button>
+                        </div>
+                    </td>
+                </tr>
+                 
+                <tr class="row_type_A">
+                    <td width="20px" , class="paper_id">12</td>
+                    <td width="200px">
+                        <div style="text-align: center;">
+                            <strong><span class="author">
+                                 Mikaela Angelina Uy, Vladimir G. Kim, Minhyuk Sung, Noam Aigerman, Siddhartha Chaudhuri, Leonidas Guibas
+                                </span></strong>
+                                Stanford University, Adobe Research, KAIST, IIT Bombay
+                        </div>
+                        <div style="text-align: center;">
+                            <a href="./papers/12.pdf" target="_blank">[PDF]</a>
+                            <a href="./papers/12-supp.pdf" target="_blank">[Supp]</a>
+                            <a href="https://youtu.be/mxPUd09Eu00" target="_blank">[Video]</a>
+                        </div>
+                        <div style="text-align: center; color:red; font-size:150%;">
+                            Poster Session 2
+                        </div>
+                    </td>
+                    <td id="paper12">
+                        <p class="poster_title">
+                        Joint Learning of 3D Shape Retrieval and Deformation
+                        </p>
+                        <span class="hidden">
+                            <p><strong>Abstract:</strong>
+                            We propose a novel technique for producing high-quality
+                            3D models that match a given target object image or scan.
+                            Our method is based on retrieving an existing shape from
+                            a database of 3D models and then deforming its parts to
+                            match the target shape. Unlike previous approaches that independently focus on either shape retrieval or deformation,
+                            we propose a joint learning procedure that simultaneously
+                            trains the neural deformation module along with the embedding space used by the retrieval module. This enables our
+                            network to learn a deformation-aware embedding space, so
+                            that retrieved models are more amenable to match the target after an appropriate deformation. In fact, we use the
+                            embedding space to guide the shape pairs used to train the
+                            deformation module, so that it invests its capacity in learning deformations between meaningful shape pairs. Furthermore, our novel part-aware deformation module can work
+                            with inconsistent and diverse part-structures on the source
+                            shapes. We demonstrate the benefits of our joint training
+                            not only on our novel framework, but also on other stateof-the-art neural deformation modules proposed in recent
+                            years. Lastly, we also show that our jointly-trained method
+                            outperforms various non-joint baselines.
+                            </p>
+                        </span>
+                        <div style="text-align: center;">
+                            <button onclick="moreOrLess($('#paper12'))">Show Abstract</button>
+                        </div>
+                    </td>
+                </tr>
+                 
+                <tr class="row_type_B">
+                    <td width="20px" , class="paper_id">13</td>
+                    <td width="200px">
+                        <div style="text-align: center;">
+                            <strong><span class="author">
+                                    Minghua Liu, Minhyuk Sung, Radomir Mech, Hao Su
+                                </span></strong>
+                                UCSD, KAIST, Adobe Research
+                        </div>
+                        <div style="text-align: center;">
+                            <a href="./papers/13.pdf" target="_blank">[PDF]</a>
+                            <a href="https://youtu.be/Kezykj1WRpE" target="_blank">[Video]</a>
+                        </div>
+                        <div style="text-align: center; color:red; font-size:150%;">
+                            Poster Session 1 & 2
+                        </div>
+                    </td>
+                    <td id="paper13">
+                        <p class="poster_title">
+                        DeepMetaHandles: Learning Deformation Meta-Handles of 3D Meshes with Biharmonic Coordinates
+                        </p>
+                        <span class="hidden">
+                            <p><strong>Abstract:</strong>
+                            We propose DeepMetaHandles, a 3D conditional generative model based on mesh deformation. Given a collection of 3D meshes of a category and their deformation
+                            handles (control points), our method learns a set of metahandles for each shape, which are represented as combinations of the given handles. The disentangled meta-handles
+                            factorize all the plausible deformations of the shape, while
+                            each of them corresponds to an intuitive deformation. A
+                            new deformation can then be generated by sampling the coefficients of the meta-handles in a specific range. We employ biharmonic coordinates as the deformation function,
+                            which can smoothly propagate the control points’ translations to the entire mesh. To avoid learning zero deformation as meta-handles, we incorporate a target-fitting
+                            module which deforms the input mesh to match a random target. To enhance deformations’ plausibility, we
+                            employ a soft-rasterizer-based discriminator that projects
+                            the meshes to a 2D space. Our experiments demonstrate
+                            the superiority of the generated deformations as well as
+                            the interpretability and consistency of the learned metahandles. 
+                            </p>
+                        </span>
+                        <div style="text-align: center;">
+                            <button onclick="moreOrLess($('#paper13'))">Show Abstract</button>
+                        </div>
+                    </td>
+                </tr>
+                 
+                <tr class="row_type_A">
+                    <td width="20px" , class="paper_id">14</td>
+                    <td width="200px">
+                        <div style="text-align: center;">
+                            <strong><span class="author">
+                                    Yikai Li, Jiayuan Mao, Xiuming Zhang, William T. Freeman, Joshua B. Tenenbaum, Noah Snavely, Jiajun Wu
+                                </span></strong>
+                                MIT CSAIL, Shanghai Jiao Tong University, Google Research, Stanford University
+                        </div>
+                        <div style="text-align: center;">
+                            <a href="./papers/14.pdf" target="_blank">[PDF]</a>
+                            <a href="./papers/14-supp.pdf" target="_blank">[Supp]</a>
+                            <a href="https://youtu.be/gTOexsj9Rng" target="_blank">[Video]</a>
+                        </div>
+                        <div style="text-align: center; color:red; font-size:150%;">
+                            Poster Session 1 & 2
+                        </div>
+                    </td>
+                    <td id="paper14">
+                        <p class="poster_title">
+                        Multi-Plane Program Induction with 3D Box Priors
+                        </p>
+                        <span class="hidden">
+                            <p><strong>Abstract:</strong>
+                            We consider two important aspects in understanding and
+                            editing images: modeling regular, program-like texture or
+                            patterns in 2D planes, and 3D posing of these planes in the
+                            scene. Unlike prior work on image-based program synthesis, which assumes the image contains a single visible 2D
+                            plane, we present Box Program Induction (BPI), which infers a program-like scene representation that simultaneously
+                            models repeated structure on multiple 2D planes, the 3D position and orientation of the planes, and camera parameters,
+                            all from a single image. Our model assumes a box prior,
+                            i.e., that the image captures either an inner view or an outer
+                            view of a box in 3D. It uses neural networks to infer visual
+                            cues such as vanishing points or wireframe lines to guide a
+                            search-based algorithm to find the program that best explains
+                            the image. Such a holistic, structured scene representation
+                            enables 3D-aware interactive image editing operations such
+                            as inpainting missing pixels, changing camera parameters,
+                            and extrapolate the image contents.
+                            </p>
+                        </span>
+                        <div style="text-align: center;">
+                            <button onclick="moreOrLess($('#paper14'))">Show Abstract</button>
+                        </div>
+                    </td>
+                </tr>
+               
+            </table>
+
+
+<h2 id="contact">Contact Info</h2>
+<p>E-mail: 
+<a href="mailto:struco3d@googlegroups.com" target="_blank">struco3d@googlegroups.com</a> or 
+<a href="mailto:kaichun@cs.stanford.edu" target="_blank">kaichun@cs.stanford.edu</a>
+</p>
+
+
+
+<div style="clear: both;">&nbsp;</div>
+</div><br><br>
+
+</body>
+
+</html>

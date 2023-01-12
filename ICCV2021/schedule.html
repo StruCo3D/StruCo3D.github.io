@@ -1,0 +1,505 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <link rel="icon" type="image/png" href="data/logo_icon.png">
+    <title>ICCV21 StruCo3D Workshop</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link href="data/default.css" rel="stylesheet" type="text/css" />
+    <meta property='og:title' content='ICCV21 StruCo3D Workshop: Structural and Compositional Learning on 3D Data'/>
+    <meta property='og:url' content='https://StruCo3D.github.io/ICCV2021' />
+    <meta property='og:image' content='https://StruCo3D.github.io/ICCV2021/data/logo_full.png' />
+    <meta property="og:type" content="website" />
+  </head>
+
+  <body>
+    <div id="header">
+      <div id="logo">
+	<h1>
+		<center>
+	    	 <span style="font-size:50%;color:#777;font-weight:normal">The first Workshop on</span><br>
+             Structural and Compositional Learning on 3D Data
+		</center>
+	</h1><br>
+	<h2>
+		<center>
+      <span style="font-size:92%;color:#777;font-weight:normal">October 16 @ 
+          <a href="http://iccv2021.thecvf.com" target="_blank">ICCV 2021</a> 
+      <span style="font-size:92%;color:#777;font-weight:bold">Virtual</span>
+		</center>
+	</h2><br>
+	</div>
+
+  <div id="menu">
+    <center>
+      <ul>
+        <li class="first"><a href="./index.html" accesskey="1">Home</a></li>
+      </ul>
+    </center>
+</div>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              mybutton.style.display = "block";
+                } else {
+                        mybutton.style.display = "none";
+                          }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+      document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+}
+</script>
+
+
+<div id="content">
+  <div id="tz_select">
+     <p><h2 style="color:red;">Select your time zone<br>Default: Eastern Daylight Time</h2></p>
+    <select class="form-control"></select>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./tz_selector/timezones.full.js"></script>
+        <script>
+          function setTimezone(tz) {
+            options = {
+              timeZone: tz, 
+              month: 'short',
+              day: 'numeric',
+              hour: '2-digit', 
+              minute: '2-digit' 
+            }
+            block_options = {
+              timeZone: tz, 
+              month: 'short',
+              day: 'numeric',
+              hour: '2-digit', 
+              minute: '2-digit' 
+            }
+            schedule = {
+              "#intro_start" : new Date(Date.parse("16 Oct 2021 07:00:00 EDT")),
+              "#intro_end": new Date(Date.parse("16 Oct 2021 07:10:00 EDT")),
+              
+              "#sec1_intro_start" : new Date(Date.parse("16 Oct 2021 07:10:00 EDT")),
+              "#sec1_intro_end": new Date(Date.parse("16 Oct 2021 07:15:00 EDT")),
+
+              "#sec1_talk1_start" : new Date(Date.parse("16 Oct 2021 07:15:00 EDT")),
+              "#sec1_talk1_end": new Date(Date.parse("16 Oct 2021 07:30:00 EDT")),
+
+              "#sec1_talk2_start" : new Date(Date.parse("16 Oct 2021 07:30:00 EDT")),
+              "#sec1_talk2_end": new Date(Date.parse("16 Oct 2021 07:45:00 EDT")),
+
+              "#sec1_talk3_start" : new Date(Date.parse("16 Oct 2021 07:45:00 EDT")),
+              "#sec1_talk3_end": new Date(Date.parse("16 Oct 2021 08:25:00 EDT")),
+
+              "#sec1_talk4_start" : new Date(Date.parse("16 Oct 2021 08:25:00 EDT")),
+              "#sec1_talk4_end": new Date(Date.parse("16 Oct 2021 09:05:00 EDT")),
+              
+              "#sec2_intro_start" : new Date(Date.parse("16 Oct 2021 09:10:00 EDT")),
+              "#sec2_intro_end": new Date(Date.parse("16 Oct 2021 09:15:00 EDT")),
+
+              "#sec2_talk1_start" : new Date(Date.parse("16 Oct 2021 09:15:00 EDT")),
+              "#sec2_talk1_end": new Date(Date.parse("16 Oct 2021 09:55:00 EDT")),
+
+              "#sec2_talk2_start" : new Date(Date.parse("16 Oct 2021 10:25:00 EDT")),
+              "#sec2_talk2_end": new Date(Date.parse("16 Oct 2021 11:05:00 EDT")),
+
+              "#sec2_talk3_start" : new Date(Date.parse("16 Oct 2021 09:55:00 EDT")),
+              "#sec2_talk3_end": new Date(Date.parse("16 Oct 2021 10:10:00 EDT")),
+
+              "#sec2_talk4_start" : new Date(Date.parse("16 Oct 2021 10:10:00 EDT")),
+              "#sec2_talk4_end": new Date(Date.parse("16 Oct 2021 10:25:00 EDT")),
+              
+              "#sec3_intro_start" : new Date(Date.parse("16 Oct 2021 12:30:00 EDT")),
+              "#sec3_intro_end": new Date(Date.parse("16 Oct 2021 12:35:00 EDT")),
+
+              "#sec3_talk1_start" : new Date(Date.parse("16 Oct 2021 12:35:00 EDT")),
+              "#sec3_talk1_end": new Date(Date.parse("16 Oct 2021 13:15:00 EDT")),
+
+              "#sec3_talk2_start" : new Date(Date.parse("16 Oct 2021 13:15:00 EDT")),
+              "#sec3_talk2_end": new Date(Date.parse("16 Oct 2021 13:55:00 EDT")),
+
+              "#sec3_talk3_start" : new Date(Date.parse("16 Oct 2021 13:55:00 EDT")),
+              "#sec3_talk3_end": new Date(Date.parse("16 Oct 2021 14:10:00 EDT")),
+
+              "#sec3_talk4_start" : new Date(Date.parse("16 Oct 2021 14:10:00 EDT")),
+              "#sec3_talk4_end": new Date(Date.parse("16 Oct 2021 14:25:00 EDT")),
+              
+              "#sec4_intro_start" : new Date(Date.parse("16 Oct 2021 14:30:00 EDT")),
+              "#sec4_intro_end": new Date(Date.parse("16 Oct 2021 14:35:00 EDT")),
+
+              "#sec4_talk1_start" : new Date(Date.parse("16 Oct 2021 14:35:00 EDT")),
+              "#sec4_talk1_end": new Date(Date.parse("16 Oct 2021 15:15:00 EDT")),
+
+              "#sec4_talk2_start" : new Date(Date.parse("16 Oct 2021 15:15:00 EDT")),
+              "#sec4_talk2_end": new Date(Date.parse("16 Oct 2021 15:55:00 EDT")),
+
+              "#sec4_talk3_start" : new Date(Date.parse("16 Oct 2021 15:55:00 EDT")),
+              "#sec4_talk3_end": new Date(Date.parse("16 Oct 2021 16:10:00 EDT")),
+
+              "#sec4_talk4_start" : new Date(Date.parse("16 Oct 2021 16:10:00 EDT")),
+              "#sec4_talk4_end": new Date(Date.parse("16 Oct 2021 16:25:00 EDT")),
+
+            }
+            blocks = {
+              "#sec1_start" : new Date(Date.parse("16 Oct 2021 07:10:00 EDT")),
+              "#sec1_end" : new Date(Date.parse("16 Oct 2021 09:05:00 EDT")),
+
+              "#sec2_start" : new Date(Date.parse("16 Oct 2021 09:10:00 EDT")),
+              "#sec2_end" : new Date(Date.parse("16 Oct 2021 11:05:00 EDT")),
+
+              "#sec3_start" : new Date(Date.parse("16 Oct 2021 12:30:00 EDT")),
+              "#sec3_end" : new Date(Date.parse("16 Oct 2021 14:25:00 EDT")),
+
+              "#sec4_start" : new Date(Date.parse("16 Oct 2021 14:30:00 EDT")),
+              "#sec4_end" : new Date(Date.parse("16 Oct 2021 16:25:00 EDT")),
+
+              "#poster1_start" : new Date(Date.parse("16 Oct 2021 11:10:00 EDT")),
+              "#poster1_end" : new Date(Date.parse("16 Oct 2021 11:40:00 EDT")),
+              
+              "#poster2_start" : new Date(Date.parse("16 Oct 2021 17:30:00 EDT")),
+              "#poster2_end" : new Date(Date.parse("16 Oct 2021 18:00:00 EDT")),
+
+              "#panel_start" : new Date(Date.parse("16 Oct 2021 16:30:00 EDT")),
+              "#panel_end" : new Date(Date.parse("16 Oct 2021 17:25:00 EDT")),
+            }
+            var keys = Object.keys(schedule)
+            for (var i = 0; i < keys.length; ++i) {
+              $(keys[i]).html(schedule[keys[i]].toLocaleString(navigator.language, options))
+            }
+            var keys = Object.keys(blocks)
+            for (var i = 0; i < keys.length; ++i) {
+              $(keys[i]).html("<b>" + blocks[keys[i]].toLocaleString(navigator.language, block_options) + "</b>")
+            }
+          }
+          $('select').timezones();
+          $('select').change(function() {
+            setTimezone($('select').val())
+          });
+          $(document).ready(function() {
+            setTimezone($('select').val())
+          })
+      </script>
+
+<table class="schedule" id="program">
+  <tr class="row_type_A">
+    <td width="80px">
+	    <b>Start</b>
+    </td>
+    <td width="80px">
+      <b>End</b>
+    </td>
+    <td>
+	    <b>Event</b>
+    </td>
+  </tr>
+  
+  <tr class="row_type_B">
+    <td id="intro_start"></td>
+    <td id="intro_end"></td>
+    <td>
+	    <p class="poster_title">Welcome and Introductions</p>
+        <a href="data/intro.pdf" target="_blank">[Slides PDF Link]</a><br/>
+		Workshop Organizers (Kaichun Mo)
+    </td>
+  </tr>
+
+  
+
+  <tr class="block">
+    <td id="sec1_start"></td>
+    <td id="sec1_end"></td>
+    <td><b> Session 1: Structural Representations for 3D Scenes </b>
+    </td>
+  </tr>
+
+ <tr class="row_type_B">
+    <td id="sec1_intro_start"></td>
+    <td id="sec1_intro_end"></td>
+    <td>
+        <p class="poster_title">Opening Remarks for Session 1</p>
+        Workshop Organizers (Kai Wang, Antoni Rosinol)
+    </td>
+  </tr>
+  
+  <tr class="row_type_A">
+    <td id="sec1_talk1_start"></td>
+    <td id="sec1_talk1_end"></td>
+    <td>
+        <table><tr><td style="border: none"><a href="http://campar.in.tum.de/Main/HelisaDhamo" target="_blank"> <img alt src="data/helisa.jpg" height="140"/></a></td>
+        <td style="border: none"><p class="poster_title">[Spotlight] Describing 3D Indoor Scenes via Semantic Scene Graphs</p><br>
+            Helisa Dhamo (TUM)</td></tr></table>
+    </td>
+  </tr>
+ 
+  <tr class="row_type_B">
+    <td id="sec1_talk2_start"></td>
+    <td id="sec1_talk2_end"></td>
+    <td>
+        <table><tr><td style="border: none"><a href="http://siyuanhuang.com/" target="_blank"> <img alt src="data/siyuan.png" height="140"/></a></td>
+        <td style="border: none"><p class="poster_title">[Spotlight] Compositional Structure in 3D Vision and Language</p><br>
+            Siyuan Huang (UCLA)</td></tr></table>
+    </td>
+  </tr>
+ 
+ <tr class="row_type_A">
+    <td id="sec1_talk3_start"></td>
+    <td id="sec1_talk3_end"></td>
+    <td>
+        <table><tr><td style="border: none"><a href="https://dritchie.github.io/" target="_blank"> <img alt src="data/daniel.jpg" height="140"/></a></td>
+        <td style="border: none"><p class="poster_title">[Keynote] Learning to Infer and Generate Programs for 3D Shapes and Scenes</p><br>
+            Daniel Ritchie (Brown)</td></tr></table>
+    </td>
+  </tr>
+
+  <tr class="row_type_B">
+    <td id="sec1_talk4_start"></td>
+    <td id="sec1_talk4_end"></td>
+    <td>
+        <table><tr><td style="border: none"><a href="https://lucacarlone.mit.edu/" target="_blank"> <img alt src="data/luca.jpg" height="140"/></a></td>
+        <td style="border: none"><p class="poster_title">[Keynote] 3D Dynamic Scene Graphs: High-level Scene Understanding for Embodied Intelligence
+            </p><br>
+            Luca Carlone (MIT)</td></tr></table>
+    </td>
+  </tr>
+  
+  <tr class="block">
+    <td id="sec2_start"></td>
+    <td id="sec2_end"></td>
+    <td><b> Session 2: Compositional Structures in Robotics </b>
+    </td>
+  </tr>
+
+ <tr class="row_type_B">
+    <td id="sec2_intro_start"></td>
+    <td id="sec2_intro_end"></td>
+    <td>
+        <p class="poster_title">Opening Remarks for Session 2</p>
+        Workshop Organizers (Fei Xia, Danfei Xu)
+    </td>
+  </tr>
+
+ <tr class="row_type_A">
+    <td id="sec2_talk1_start"></td>
+    <td id="sec2_talk1_end"></td>
+    <td>
+        <table><tr><td style="border: none"><a href="https://www.cs.columbia.edu/~shurans/" target="_blank"> <img alt src="data/shuran.jpg" height="140"/></a></td>
+        <td style="border: none"><p class="poster_title">[Keynote] Structure from Action: Object Structure Discovery with Active Interactions</p><br>
+            Shuran Song (Columbia University)</td></tr></table>
+    </td>
+  </tr>
+
+
+  <tr class="row_type_B">
+    <td id="sec2_talk3_start"></td>
+    <td id="sec2_talk3_end"></td>
+    <td>
+        <table><tr><td style="border: none"><a href="https://krrish94.github.io/" target="_blank"> <img alt src="data/krishna.jpg" height="140"/></a></td>
+        <td style="border: none"><p class="poster_title">[Spotlight] Taskography - Robot task planning over large 3D scene graphs</p><br>
+            Krishna Murthy (Mila)</td></tr></table>
+    </td>
+  </tr>
+ 
+  <tr class="row_type_A">
+    <td id="sec2_talk4_start"></td>
+    <td id="sec2_talk4_end"></td>
+    <td>
+        <table><tr><td style="border: none"><a href="https://zhuyifengzju.github.io/" target="_blank"> <img alt src="data/yifeng.png" height="140"/></a></td>
+        <td style="border: none"><p class="poster_title">[Spotlight] Hierarchical Planning for Long-Horizon Manipulation with Geometric and Symbolic Scene Graphs</p><br>
+            Yifeng Zhu (UT Austin)</td></tr></table>
+    </td>
+  </tr>
+ 
+  <tr class="row_type_B">
+    <td id="sec2_talk2_start"></td>
+    <td id="sec2_talk2_end"></td>
+    <td>
+        <table><tr><td style="border: none"><a href="http://roozbehm.info/" target="_blank"> <img alt src="data/roozbe.jpg" height="140"/></a></td>
+        <td style="border: none"><p class="poster_title">[Keynote] Learning Visual Representations, Language, and Scene Dynamics via Interaction with the World
+            </p><br>
+            Roozbeh Mottaghi (AI2 & University of Washington)</td></tr></table>
+    </td>
+  </tr>
+ 
+  
+  
+  
+  <tr class="row_type_C">
+    <td id="poster1_start"></td>
+    <td id="poster1_end"></td>
+    <td>
+        <p class="poster_title">Accepted Paper Poster Session 1</p>
+    </td>
+  </tr>
+ 
+  
+
+
+
+<tr class="block">
+    <td id="sec3_start"></td>
+    <td id="sec3_end"></td>
+    <td><b> Session 3: Structural Representations for 3D Shapes </b>
+    </td>
+  </tr>
+
+ <tr class="row_type_A">
+    <td id="sec3_intro_start"></td>
+    <td id="sec3_intro_end"></td>
+    <td>
+        <p class="poster_title">Opening Remarks for Session 3</p>
+        Workshop Organizers (Minhyuk Sung, Kaichun Mo)
+    </td>
+  </tr>
+
+ <tr class="row_type_B">
+    <td id="sec3_talk1_start"></td>
+    <td id="sec3_talk1_end"></td>
+    <td>
+        <table><tr><td style="border: none"><a href="https://geometry.stanford.edu/member/guibas/index.html" target="_blank"> <img alt src="data/leo.jpg" height="140"/></a></td>
+        <td style="border: none"><p class="poster_title">[Keynote] 3D Structure Extraction and Generation</p><br>
+            Leonidas J. Guibas (Stanford)</td></tr></table>
+    </td>
+  </tr>
+
+  <tr class="row_type_A">
+    <td id="sec3_talk2_start"></td>
+    <td id="sec3_talk2_end"></td>
+    <td>
+        <table><tr><td style="border: none"><a href="https://www.cs.sfu.ca/~haoz/" target="_blank"> <img alt src="data/richard.png" height="140"/></a></td>
+        <td style="border: none"><p class="poster_title">[Keynote] Unsupervised Learning of 3D Shape Structures 
+            </p><br>
+            Hao (Richard) Zhang (SFU)</td></tr></table>
+    </td>
+  </tr>
+ 
+  <tr class="row_type_B">
+    <td id="sec3_talk3_start"></td>
+    <td id="sec3_talk3_end"></td>
+    <td>
+        <table><tr><td style="border: none"><a href="https://hippogriff.github.io/" target="_blank"> <img alt src="data/gopal.png" height="140"/></a></td>
+        <td style="border: none"><p class="poster_title">[Spotlight] ParSeNet: A Parametric Surface Fitting Network for 3D Point Clouds</p><br>
+            Gopal Sharma (UMass Amherst)</td></tr></table>
+    </td>
+  </tr>
+ 
+  <tr class="row_type_A">
+    <td id="sec3_talk4_start"></td>
+    <td id="sec3_talk4_end"></td>
+    <td>
+        <table><tr><td style="border: none"><a href="https://jasonyzhang.com/" target="_blank"> <img alt src="data/jason.jpg" height="140"/></a></td>
+        <td style="border: none"><p class="poster_title">[Spotlight] Composing Humans and Objects in the Wild</p><br>
+            Jason Zhang (CMU)</td></tr></table>
+    </td>
+  </tr>
+ 
+ 
+  
+
+
+  <tr class="block">
+    <td id="sec4_start"></td>
+    <td id="sec4_end"></td>
+    <td><b> Session 4: 3D Structural and Compositional Discovery </b>
+    </td>
+  </tr>
+
+ <tr class="row_type_A">
+    <td id="sec4_intro_start"></td>
+    <td id="sec4_intro_end"></td>
+    <td>
+        <p class="poster_title">Opening Remarks for Session 4</p>
+        Workshop Organizers (Paul Guerrero, Songfang Han)
+    </td>
+  </tr>
+
+ <tr class="row_type_B">
+    <td id="sec4_talk1_start"></td>
+    <td id="sec4_talk1_end"></td>
+    <td>
+        <table><tr><td style="border: none"><a href="https://www.cs.princeton.edu/~funk/" target="_blank"> <img alt src="data/tom.jpg" height="140"/></a></td>
+        <td style="border: none"><p class="poster_title">[Keynote] Hybrid explicit/implicit representations of shape</p><br>
+            Thomas Funkhouser (Princeton & Google)</td></tr></table>
+    </td>
+  </tr>
+
+  <tr class="row_type_A">
+    <td id="sec4_talk2_start"></td>
+    <td id="sec4_talk2_end"></td>
+    <td>
+        <table><tr><td style="border: none"><a href="https://cseweb.ucsd.edu/~haosu/" target="_blank"> <img alt src="data/hao.jpg" height="140"/></a></td>
+        <td style="border: none"><p class="poster_title">[Keynote] Compositional Learning in Geometry</p><br>
+            Hao Su (UCSD)</td></tr></table>
+    </td>
+  </tr>
+ 
+  <tr class="row_type_B">
+    <td id="sec4_talk3_start"></td>
+    <td id="sec4_talk3_end"></td>
+    <td>
+        <table><tr><td style="border: none"><a href="https://www.kylegenova.com/" target="_blank"> <img alt src="data/kgenova.png" height="140"/></a></td>
+        <td style="border: none"><p class="poster_title">[Spotlight] Local Deep Implicit Functions</p><br>
+            Kyle Genova (Google Research)</td></tr></table>
+    </td>
+  </tr>
+ 
+  <tr class="row_type_A">
+    <td id="sec4_talk4_start"></td>
+    <td id="sec4_talk4_end"></td>
+    <td>
+        <table><tr><td style="border: none"><a href="https://paschalidoud.github.io/" target="_blank"> <img alt src="data/despoina.png" height="140"/></a></td>
+        <td style="border: none"><p class="poster_title">[Spotlight] Neural Parts: Learning Expressive 3D Shape Abstractions with Invertible Neural Networks</p><br>
+            Despoina Paschalidou (Max Planck ETH)</td></tr></table>
+    </td>
+  </tr>
+   
+
+
+  <tr class="row_type_D">
+    <td id="panel_start"></td>
+    <td id="panel_end"></td>
+    <td>
+        <p class="poster_title">Panel Discussion</p>
+        Host: Shubham Tulsiani, Niloy Mitra<br/>
+        Panelists: Shuran Song, Roozbeh Mottaghi, Hao Su, Hao (Richard) Zhang, Daniel Ritchie, Thomas Funkhouser.
+    </td>
+  </tr>
+  
+    <tr class="row_type_C">
+     <td id="poster2_start"></td>
+     <td id="poster2_end"></td>
+     <td>
+         <p class="poster_title">Accepted Paper Poster Session 2</p>
+     </td>
+    </tr>
+
+</table>
+
+</p>
+
+<h2>Contact Info</h2>
+<p>E-mail: 
+<a href="mailto:struco3d@googlegroups.com" target="_blank">struco3d@googlegroups.com</a> or 
+<a href="mailto:kaichun@cs.stanford.edu" target="_blank">kaichun@cs.stanford.edu</a>
+</p>
+
+<h2 id="contact">Acknowledgements</h2>
+<p>Website template borrowed from: 
+<a href="https://futurecv.github.io/" target="_blank">https://futurecv.github.io/</a>
+(Thanks to <a href="https://www.cs.cmu.edu/~dpathak/" target="_blank">Deepak Pathak</a>)
+</p>
+
+<div style="clear: both;">&nbsp;</div>
+</div><br><br>
+
+</body>
+</html>

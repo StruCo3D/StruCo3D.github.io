@@ -1,0 +1,363 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <link rel="icon" type="image/png" href="data/logo_icon.png">
+    <title>ICCV21 StruCo3D Workshop</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link href="data/default.css" rel="stylesheet" type="text/css" />
+    <meta property='og:title' content='ICCV21 StruCo3D Workshop: Structural and Compositional Learning on 3D Data'/>
+    <meta property='og:url' content='https://StruCo3D.github.io/ICCV2021' />
+    <meta property='og:image' content='https://StruCo3D.github.io/ICCV2021/data/logo_full.png' />
+    <meta property="og:type" content="website" />
+  </head>
+
+  <body>
+    <div id="header">
+      <div id="logo">
+	<h1>
+		<center>
+	    	 <span style="font-size:50%;color:#777;font-weight:normal">The first Workshop on</span><br>
+             Structural and Compositional Learning on 3D Data
+		</center>
+	</h1><br>
+	<h2>
+		<center>
+      <span style="font-size:92%;color:#777;font-weight:normal">October 16 @ 
+          <a href="http://iccv2021.thecvf.com" target="_blank">ICCV 2021</a> 
+      <span style="font-size:92%;color:#777;font-weight:bold">Virtual</span>
+		</center>
+	</h2><br>
+    <center><img src="data/logo_mid.png" alt="" width="380"/></center>
+	</div>
+
+  <div id="menu">
+    <center>
+      <ul>
+        <li><a href="#speakers">Speakers</a></li>
+        <li><a href="./schedule.html" accesskey="2">Schedule</a></li>
+        <li><a href="./papers.html">Papers</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </center>
+</div>
+
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              mybutton.style.display = "block";
+                } else {
+                        mybutton.style.display = "none";
+                          }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+      document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+}
+</script>
+
+
+	<div id="content">
+<h2>News</h2>
+<p>
+<ul>
+<li>
+	<img src="data/new.gif"> [Oct 30, 2021] 
+    Here are the recordings for the workshop talks and panel discussion: 
+    <a href="https://www.youtube.com/watch?v=IIYumMRDrdg" target="_blank">[Morning Part]</a>
+    <a href="https://www.youtube.com/watch?v=Ssw38LSB-O8" target="_blank">[Afternoon Part]</a>
+</li><li>
+    [Oct 17, 2021]
+    Thank you for attending! We will release all videos on YouTube later.
+</li><li>
+    [Oct 16, 2021] 
+    We are livestreaming via the ICCV-provided Zoom. You need to register to see the link. 
+    See <a href="data/instruction.pdf" target="_blank">HERE</a> 
+    for instructions how to join live sessions
+    and <a href="data/intro.pdf" target="_blank">HERE</a>
+    for the introduction and logistics to the workshop.
+    All audience will be muted to avoid zoombombing. Please use the Zoom chat box to ask questions, or ask for unmute to speak.
+    We will record the event and release on YouTube later.
+    For poster sessions, we are using Gatherly. Please check authors' availability for the two poster sessions in the paper tab.
+    Please also consider watching the pre-recorded video under the paper tab.
+</li><li>
+	[Sept 21, 2021] 
+    Accepted Papers Announced. 
+</li><li>
+   [April 28, 2021] Workshop website launched, with preliminary schedules and invited speakers announced. 
+</li>
+</ul>
+</p>
+
+
+<h2>Introduction</h2>
+<p>
+  3D structure and compositionality lie at the core of many methods for different tasks in computer vision, graphics and robotics, including but not limited to recognition, reconstruction, generation, planning, manipulation, mapping and embodied perception. Unlike traditional connectionist approaches in deep learning, structural and compositional learning includes components that lean more towards the symbolic end of the spectrum, where data or functions are represented by a sparse set of separate and more clearly defined concepts. For example, in 3D objects, this could be a decomposition of an object into spatially localized parts and a sparse set of relationships between them, or in scenes, it could be a scene graph, where rich inter-object relationships are described. Similarly, a navigation or interaction task in robotics can also be decomposed into separate parts of concepts or submodules that are related by spatial, causal, or semantic relationships.
+</p>
+<p>
+  People from different fields or backgrounds use different structural and compositional representations of their 3D data for different applications. We bring them together in this workshop to have an explicit discussion of the advantages and disadvantages of different representations and approaches, as well as to share, discuss and debate the diverse opinions regarding the following questions:
+</p>
+</p>
+<ul>
+    <li>Which types of structure should we use for different tasks and applications in graphics, vision and robotics?</li>
+    <li>How should we factorize a given problem into sparse concepts that make up the structure?</li>
+    <li>How should we factorize different types of 3D data into sparse sets of components, relationships, or operators?</li>
+    <li>Which algorithms are best suited for a given type of structure?</li>
+    <li>How should we mix structural and non-structural approaches?</li>
+    <li>Which parts of a problem are suited for structural approaches, and which ones are better handled without structure?</li>
+</ul>
+</p>
+
+	
+<h2 id="speakers">Invited Keynote Speakers</h2>
+<center>
+
+<table style="width:100%">
+<p>
+
+<tr>
+<td><center><a href="https://geometry.stanford.edu/member/guibas/index.html" target="_blank"> <img alt src="data/leo.jpg" height="170"/> </a></center> </td>
+<td><center><a href="https://www.cs.sfu.ca/~haoz/" target="_blank"><img alt src="data/richard.png" height="170"/> </a></center> </td>
+<td><center><a href="https://dritchie.github.io/" target="_blank"><img alt src="data/daniel.jpg" height="170"/> </a></center></td>
+<td><center><a href="https://lucacarlone.mit.edu/" target="_blank"> <img alt src="data/luca.jpg" height="170"/> </a></center> </td>
+</tr>
+<tr>
+<td> <center> <h3> Leonidas J. Guibas</h3> </center></td>
+<td> <center> <h3> Hao (Richard) Zhang</h3> </center></td>
+<td> <center> <h3> Daniel Ritchie</h3> </center></td>
+<td> <center> <h3> Luca Carlone </h3> </center></td>
+</tr>
+<tr>
+<td> <center> <font size= "2">Stanford</font></center> </td>
+<td> <center> <font size= "2">SFU</font></center> </td>
+<td> <center> <font size= "2">Brown</font></center> </td>
+<td> <center> <font size= "2">MIT</font></center> </td>
+</tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+
+<tr>
+<td><center><a href="https://www.cs.princeton.edu/~funk/" target="_blank"> <img alt src="data/tom.jpg" height="170"/> </a></center> </td>
+<td><center><a href="https://cseweb.ucsd.edu/~haosu/" target="_blank"> <img alt src="data/hao.jpg" height="170"/> </a></center> </td>
+<td><center><a href="https://www.cs.columbia.edu/~shurans/" target="_blank"> <img alt src="data/shuran.jpg" height="170"/> </a></center> </td>
+<td><center><a href="http://roozbehm.info" target="_blank"> <img alt src="data/roozbe.jpg" height="170"/> </a></center> </td>
+</tr>
+<tr>
+<td> <center> <h3> Thomas Funkhouser </h3> </center></td>
+<td> <center> <h3> Hao Su </h3> </center></td>
+<td> <center> <h3> Shuran Song </h3> </center></td>
+<td> <center> <h3> Roozbeh Mottaghi </h3> </center></td>
+</tr>
+<tr>
+<td> <center> <font size= "2">Princeton & Google </font></center> </td>
+<td> <center> <font size= "2">UCSD</font></center> </td>
+<td> <center> <font size= "2">Columbia University</font></center> </td>
+<td> <center> <font size= "2">AI2 & University of Washington</font></center> </td>
+</tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+
+</p>
+</table>
+</center>
+
+
+<h2>Invited Spotlight Speakers</h2>
+<center>
+
+<table style="width:100%">
+<p>
+
+<tr>
+<td><center><a href="https://hippogriff.github.io/" target="_blank"> <img alt src="data/gopal.png" height="170"/> </a></center> </td>
+<td><center><a href="https://jasonyzhang.com/" target="_blank"><img alt src="data/jason.jpg" height="170"/> </a></center> </td>
+<td><center><a href="http://campar.in.tum.de/Main/HelisaDhamo" target="_blank"><img alt src="data/helisa.jpg" height="170"/> </a></center></td>
+<td><center><a href="https://siyuanhuang.com/" target="_blank"> <img alt src="data/siyuan.png" height="170"/> </a></center> </td>
+</tr>
+<tr>
+<td> <center> <h3> Gopal Sharma </h3> </center></td>
+<td> <center> <h3> Jason Zhang </h3> </center></td>
+<td> <center> <h3> Helisa Dhamo </h3> </center></td>
+<td> <center> <h3> Siyuan Huang </h3> </center></td>
+</tr>
+<tr>
+<td> <center> <font size= "2">UMass Amherst</font></center> </td>
+<td> <center> <font size= "2">CMU</font></center> </td>
+<td> <center> <font size= "2">TUM</font></center> </td>
+<td> <center> <font size= "2">UCLA</font></center> </td>
+</tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+
+<tr>
+<td><center><a href="https://www.kylegenova.com/" target="_blank"> <img alt src="data/kgenova.png" height="170"/> </a></center> </td>
+<td><center><a href="https://paschalidoud.github.io/" target="_blank"> <img alt src="data/despoina.png" height="170"/> </a></center> </td>
+<td><center><a href="https://krrish94.github.io/" target="_blank"> <img alt src="data/krishna.jpg" height="170"/> </a></center> </td>
+<td><center><a href="https://zhuyifengzju.github.io/" target="_blank"> <img alt src="data/yifeng.png" height="170"/> </a></center> </td>
+</tr>
+<tr>
+<td> <center> <h3> Kyle Genova </h3> </center></td>
+<td> <center> <h3> Despoina Paschalidou </h3> </center></td>
+<td> <center> <h3> Krishna Murthy </h3> </center></td>
+<td> <center> <h3> Yifeng Zhu </h3> </center></td>
+</tr>
+<tr>
+<td> <center> <font size= "2"> Google Research </font></center> </td>
+<td> <center> <font size= "2"> Max Planck ETH </font></center> </td>
+<td> <center> <font size= "2"> Mila </font></center> </td>
+<td> <center> <font size= "2"> UT Austin </font></center> </td>
+</tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+
+</p>
+</table>
+</center>
+
+
+<h2 id="cfp">Call for Papers</h2>
+<p>
+We accept both archival full paper (up to 8 pages) and non-archival short paper (up to 4 pages) submissions. Every accepted paper will have the opportunity to give a 10-min spotlight presentation and host two 30-min poster sessions (12-hours separated).
+</p>
+<h3>Submission Cite: <a href="https://cmt3.research.microsoft.com/StruCo3D2021" target="_blank">https://cmt3.research.microsoft.com/StruCo3D2021</a></h3><br>
+<h3>Submission Instructions: <a href="./cfp.html" target="_blank">CLICK HERE</a></h3><br>
+<h3>Timeline Table (11:59 PM Pacific Time)</h3>
+<ul>
+    <li>Monday, July 26: Paper submission deadline</li>
+    <li>Monday, Aug 9: Review deadline and decision announced to authors</li>
+    <li>Monday, Aug 16: Camera ready deadline</li>
+</ul>
+</p>
+
+
+
+<h2 id="organizers">Organizers</h2>
+<center>
+
+<table style="width:100%">
+<p>
+
+<tr>
+<td><center><a href="https://cs.stanford.edu/~kaichun/" target="_blank"> <img alt src="data/kaichun.jpg" height="170"/> </a></center> </td>
+<td><center><a href="http://paulguerrero.net/" target="_blank"><img alt src="data/paul.png" height="170"/> </a></center> </td>
+<td><center><a href="https://kwang-ether.github.io/" target="_blank"> <img alt src="data/kai.jpg" height="170"/> </a></center> </td>
+<td><center><a href="http://www.mit.edu/~arosinol/" target="_blank"><img alt src="data/toni.jpg" height="170"/> </a></center></td>
+</tr>
+<tr>
+<td> <center> <h3> Kaichun Mo </h3> </center></td>
+<td> <center> <h3> Paul Guerrero </h3> </center></td>
+<td> <center> <h3> Kai Wang </h3> </center></td>
+<td> <center> <h3> Antoni Rosinol </h3> </center></td>
+</tr>
+<tr>
+<td> <center> <font size= "2">Stanford</font></center> </td>
+<td> <center> <font size= "2">Adobe</font></center> </td>
+<td> <center> <font size= "2">Brown</font></center> </td>
+<td> <center> <font size= "2">MIT</font></center> </td>
+</tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+
+<tr>
+<td><center><a href="http://fxia.me/" target="_blank"> <img alt src="data/feixia.png" height="170"/> </a></center> </td>
+<td><center><a href="https://cs.stanford.edu/~danfei/" target="_blank"> <img alt src="data/danfei.jpg" height="170"/> </a></center> </td>
+<td><center><a href="http://hansf.me/" target="_blank"> <img alt src="data/songfang.jpg" height="170"/> </a></center> </td>
+<td><center><a href="https://mhsung.github.io/" target="_blank"> <img alt src="data/minhyuk.png" height="170"/> </a></center> </td>
+</tr>
+<tr>
+<td> <center> <h3> Fei Xia </h3> </center></td>
+<td> <center> <h3> Danfei Xu </h3> </center></td>
+<td> <center> <h3> Songfang Han </h3> </center></td>
+<td> <center> <h3> Minhyuk Sung </h3> </center></td>
+</tr>
+<tr>
+<td> <center> <font size= "2"> Google </font></center> </td>
+<td> <center> <font size= "2"> Stanford </font></center> </td>
+<td> <center> <font size= "2"> UCSD </font></center> </td>
+<td> <center> <font size= "2"> KAIST </font></center> </td>
+</tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+
+<tr>
+<td><center><a href="https://shubhtuls.github.io/" target="_blank"> <img alt src="data/shubham.jpg" height="170"/> </a></center> </td>
+<td><center><a href="https://homes.cs.washington.edu/~fox/" target="_blank"> <img alt src="data/fox.jpg" height="170"/> </a></center> </td>
+<td><center><a href="http://www0.cs.ucl.ac.uk/staff/n.mitra/index.html" target="_blank"> <img alt src="data/niloy.jpg" height="170"/> </a></center> </td>
+<td><center><a href="https://www.cse.iitb.ac.in/~sidch/" target="_blank"> <img alt src="data/sid.jpg" height="170"/> </a></center> </td>
+</tr>
+<tr>
+<td> <center> <h3> Shubham Tulsiani </h3> </center></td>
+<td> <center> <h3> Dieter Fox </h3> </center></td>
+<td> <center> <h3> Niloy Mitra </h3> </center></td>
+<td> <center> <h3> Siddhartha Chaudhuri </h3> </center></td>
+</tr>
+<tr>
+<td> <center> <font size= "2"> CMU </font></center> </td>
+<td> <center> <font size= "2"> University of Washington & NVIDIA </font></center> </td>
+<td> <center> <font size= "2"> UCL & Adobe </font></center> </td>
+<td> <center> <font size= "2"> Adobe & IIT Bombay </font></center> </td>
+</tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+
+</p>
+</table>
+</center>
+
+
+<h2 id="contact">Contact Info</h2>
+<p>E-mail: 
+<a href="mailto:struco3d@googlegroups.com" target="_blank">struco3d@googlegroups.com</a> or 
+<a href="mailto:kaichun@cs.stanford.edu" target="_blank">kaichun@cs.stanford.edu</a>
+</p>
+
+<h2 id="contact">Acknowledgements</h2>
+<p>Website template borrowed from: 
+<a href="https://futurecv.github.io/" target="_blank">https://futurecv.github.io/</a>
+(Thanks to <a href="https://www.cs.cmu.edu/~dpathak/" target="_blank">Deepak Pathak</a>)
+</p>
+
+
+<div style="clear: both;">&nbsp;</div>
+</div><br><br>
+
+</body>
+</html>
