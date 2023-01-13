@@ -1,0 +1,345 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <link rel="icon" type="image/png" href="data/logo_icon.png">
+    <title>CVPR23 StruCo3D Workshop</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link href="data/default.css" rel="stylesheet" type="text/css" />
+    <meta property='og:title' content='CVPR23 StruCo3D Workshop: Structural and Compositional Learning on 3D Data'/>
+    <meta property='og:url' content='https://StruCo3D.github.io/cvpr2023' />
+    <meta property='og:image' content='https://StruCo3D.github.io/cvpr2023/data/logo_full.png' />
+    <meta property="og:type" content="website" />
+  </head>
+
+  <body>
+    <div id="header">
+      <div id="logo">
+	<h1>
+		<center>
+	    	 <span style="font-size:50%;color:#777;font-weight:normal">The Second Workshop on</span><br>
+             Structural and Compositional Learning on 3D Data
+		</center>
+	</h1><br>
+	<h2>
+		<center>
+      <span style="font-size:92%;color:#777;font-weight:normal">Jun 18 (Sun) @ 
+          <a href="http://cvpr2023.thecvf.com" target="_blank">CVPR 2023</a> 
+      <span style="font-size:92%;color:#777;font-weight:bold">Vancouver, Canana</span>
+		</center>
+	</h2><br>
+    <center><img src="data/logo_mid.png" alt="" width="380"/></center>
+	</div>
+
+  <div id="menu">
+    <center>
+      <ul>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </center>
+</div>
+
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              mybutton.style.display = "block";
+                } else {
+                        mybutton.style.display = "none";
+                          }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+      document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+}
+</script>
+
+
+	<div id="content">
+<h2>News</h2>
+<p>
+<ul>
+<li>
+	<img src="data/new.gif"> 
+  [Jan 12, 2023] 
+  Workshop website launched, with preliminary invited speakers announced. 
+</li>
+</ul>
+</p>
+
+
+<h2>Introduction</h2>
+<p>
+Dealing with the huge diversity and complexity of 3D data has become the main research challenge for various applications in computer vision, graphics, and robotics. 
+One key approach that researchers have found promising is to decompose the complex 3D data into smaller and easier composable subcomponents. 
+For example, in 3D objects, this could be a decomposition of an object into spatially localized parts and a sparse set of relationships between them, or in scenes, it could be a scene graph, where rich inter-object relationships are described. 
+Similarly, one can imagine that a navigation or interaction task in robotics can also be decomposed into separate parts of concepts or submodules that are related by spatial, causal, or semantic relationships. 
+Decomposing involved 3D data or tasks into meaningful sub-units also encourages learning more generalizable and interpretable representations that are crucial to fix potential black-box pitfalls of using deep learning.
+</p>
+<p>
+Unlike traditional connectionist approaches in deep learning, structural and compositional learning includes components that lean more towards the symbolic end of the spectrum, which leads to many challenging open research questions about how to represent the composable sub-units and how to conduct efficient learning over them. 
+People from different fields or backgrounds use different structural and compositional representations of their 3D data for different applications. 
+In this workshop series, we bring them together to have an explicit discussion of the advantages and disadvantages of different representations and approaches, as well as to share, discuss and debate the diverse opinions regarding the following questions:
+</p>
+</p>
+<ul>
+  <li>
+    How to properly decompose different kinds of 3D data and tasks into sub-components?
+  </li>
+  <li>
+    What 3D data structures should we use for different data types, tasks and applications?
+  </li>
+  <li>
+    How to conduct efficient learning over the 3D structured representations?
+  </li>
+  <li>
+    How are the approaches different for different downstream fields/applications?
+  </li>
+</ul>
+</p>
+<p>
+  We successfully hosted <a href="https://struco3d.github.io/iccv2021" target="_blank">the first StruCo3D workshop</a> at ICCV 2021 which is very well-received and inspiring to the audience. 
+In this second workshop, we are inviting a fully new line of speakers who will talk about more recent research progress and the latest trends related to the workshop topics, 
+including but not limited to:
+</p>
+<ul>
+  <li>
+    Compositional Neural Radiance Fields for Rendering and Editing;
+  </li>
+  <li>
+    Program Composition and Synthesis based on Large Linguistic and Visual-lingual Models;
+  </li>
+  <li>
+    Unsupervised Object Discovery Methods (e.g., Slot Attentions);
+  </li>
+  <li>
+    Part-whole Hierarchies, Capsule Networks, Attention-based Transformers, etc.
+  </li>
+</ul>
+
+<h2 id="speakers">Invited Keynote Speakers</h2>
+<center>
+
+<table style="width:100%">
+<p>
+
+<tr>
+<td><center><a href="https://www.microsoft.com/en-us/research/people/xtong/" target="_blank"> <img alt src="data/xin.jpeg" height="170"/> </a></center> </td>
+<td><center><a href="https://www.3dunderstanding.org/" target="_blank"><img alt src="data/angela.jpeg" height="170"/> </a></center> </td>
+<td><center><a href="https://taiya.github.io/" target="_blank"><img alt src="data/andrea.png" height="170"/> </a></center></td>
+<td><center><a href="https://homes.cs.washington.edu/~fox/" target="_blank"> <img alt src="data/dieter.jpeg" height="170"/> </a></center> </td>
+</tr>
+<tr>
+<td> <center> <h3> Xin Tong </h3> </center></td>
+<td> <center> <h3> Angela Dai </h3> </center></td>
+<td> <center> <h3> Andrea Tagliasacchi </h3> </center></td>
+<td> <center> <h3> Dieter Fox </h3> </center></td>
+</tr>
+<tr>
+<td> <center> <font size= "2">Microsoft Research (Asia)</font></center> </td>
+<td> <center> <font size= "2">Tech. Univ. of Munich</font></center> </td>
+<td> <center> <font size= "2">Simon Fraser Univ. &#38;	Google Brain</font></center> </td>
+<td> <center> <font size= "2">Univ. of Washington &#38; NVIDIA Research</font></center> </td>
+</tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+
+</p>
+</table>
+</center>
+
+
+<h2>Invited Spotlight Speakers</h2>
+<center>
+
+<table style="width:100%">
+<p>
+
+<tr>
+<td><center><a href="https://sites.google.com/view/ehsanik-personal-website?pli=1" target="_blank"> <img alt src="data/kiana.png" height="170"/> </a></center> </td>
+<td><center><a href="https://fxia22.github.io" target="_blank"><img alt src="data/fei.jpieg" height="170"/> </a></center> </td>
+<td><center><a href="http://www.cs.toronto.edu/~jungao/" target="_blank"><img alt src="data/jun.jpeg" height="170"/> </a></center></td>
+</tr>
+<tr>
+<td> <center> <h3> Kiana Ehsani </h3> </center></td>
+<td> <center> <h3> Fei Xia </h3> </center></td>
+<td> <center> <h3> Jun Gao </h3> </center></td>
+</tr>
+<tr>
+<td> <center> <font size= "2">Allen Institute for AI</font></center> </td>
+<td> <center> <font size= "2">Google Research</font></center> </td>
+<td> <center> <font size= "2">Univ. of Toronto &#38; NVIDIA Resaerch</font></center> </td>
+</tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+
+<tr>
+<td><center><a href="https://amirhertz.github.io/" target="_blank"> <img alt src="data/amir.jpeg" height="170"/> </a></center> </td>
+<td><center><a href="https://rkjones4.github.io/" target="_blank"> <img alt src="data/kenny.jpeg" height="170"/> </a></center> </td>
+<td><center><a href="https://mikacuy.github.io/" target="_blank"> <img alt src="data/mika.jpeg" height="170"/> </a></center> </td>
+</tr>
+<tr>
+<td> <center> <h3> Amir Hertz </h3> </center></td>
+<td> <center> <h3> Kenny Jones </h3> </center></td>
+<td> <center> <h3> Mikaela Uy </h3> </center></td>
+</tr>
+<tr>
+<td> <center> <font size= "2"> Tel-Aviv Univ. </font></center> </td>
+<td> <center> <font size= "2"> Brown Univ. </font></center> </td>
+<td> <center> <font size= "2"> Stanford Univ. </font></center> </td>
+</tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+
+</p>
+</table>
+</center>
+
+
+<h2 id="cfp">Call for Papers</h2>
+<p>
+We accept both archival and non-archival paper submissions.
+Please use the official CVPR template for your submissions. 
+Make sure to anonymize your submission and the paper is up to eight pages for the main content.
+The accepted archival papers will be included in the CVPR2023 conference proceedings, while the non-archival ones will just be presented in the workshop.
+All papers will be peer-reviewed by three experts in the field in a double-blind manner.
+We welcome papers that are already accepted to the CVPR main conference or other previous conferences to present your work in the non-archival paper track.
+There is no need for peer-review for such previously accepted papers, so please indicate clearly in the paper submission (mark at the end of the paper title).
+Every accepted paper will have the opportunity to give a 5-min spotlight presentation and host a poster presentation at the workshop.
+</p>
+<h3>Submission Cite: <a href="https://cmt3.research.microsoft.com/CVPR23StruCo3D" target="_blank">https://cmt3.research.microsoft.com/CVPR23StruCo3D</a></h3><br>
+<h3>Timeline Table (11:59 PM Pacific Time)</h3>
+<ul>
+    <li>Mar 4, Sat: Paper submission deadline</li>
+    <li>Mar 22, Wed: Review deadline</li>
+    <li>Mar 25, Sat: Decision announced to authors</li>
+    <li>Apr 8, Sat: Camera ready deadline</li>
+</ul>
+</p>
+
+
+<h2 id="organizers">Organizers</h2>
+<center>
+
+<table style="width:100%">
+<p>
+
+<tr>
+<td><center><a href="https://kmo.github.io" target="_blank"> <img alt src="data/kaichun.jpeg" height="170"/> </a></center> </td>
+<td><center><a href="https://kwang-ether.github.io/" target="_blank"> <img alt src="data/kai.jpeg" height="170"/> </a></center> </td>
+<td><center><a href="https://marios2019.github.io/" target="_blank"><img alt src="data/marios.jpeg" height="170"/> </a></center></td>
+<td><center><a href="https://paschalidoud.github.io/" target="_blank"><img alt src="data/despi.png" height="170"/> </a></center></td>
+</tr>
+<tr>
+<td> <center> <h3> Kaichun Mo </h3> </center></td>
+<td> <center> <h3> Kai Wang </h3> </center></td>
+<td> <center> <h3> Marios Loizou </h3> </center></td>
+<td> <center> <h3> Despoina Paschalidou </h3> </center></td>
+</tr>
+<tr>
+<td> <center> <font size= "2">NVIDIA Research</font></center> </td>
+<td> <center> <font size= "2">Brown Univ.</font></center> </td>
+<td> <center> <font size= "2">Univ. of Cyprus</font></center> </td>
+<td> <center> <font size= "2">Stanford Univ.</font></center> </td>
+</tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+
+<tr>
+<td><center><a href="https://paulguerrero.net/" target="_blank"> <img alt src="data/paul.png" height="170"/> </a></center> </td>
+<td><center><a href="https://mhsung.github.io/" target="_blank"> <img alt src="data/minhyuk.png" height="170"/> </a></center> </td>
+<td><center><a href="https://melinos.github.io/" target="_blank"> <img alt src="data/melinos.jpeg" height="170"/> </a></center> </td>
+<td><center><a href="https://www.cs.columbia.edu/~shurans/" target="_blank"> <img alt src="data/shuran.jpeg" height="170"/> </a></center> </td>
+</tr>
+<tr>
+<td> <center> <h3> Paul Guerrero </h3> </center></td>
+<td> <center> <h3> Minhyuk Sung </h3> </center></td>
+<td> <center> <h3> Melinos Averkiou </h3> </center></td>
+<td> <center> <h3> Shuran Song </h3> </center></td>
+</tr>
+<tr>
+<td> <center> <font size= "2"> Adobe Research (London) </font></center> </td>
+<td> <center> <font size= "2"> KAIST </font></center> </td>
+<td> <center> <font size= "2"> CYENS </font></center> </td>
+<td> <center> <font size= "2"> Columbia Univ. </font></center> </td>
+</tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+
+<tr>
+<td><center><a href="https://people.cs.umass.edu/~kalo/" target="_blank"> <img alt src="data/vangelos.jpeg" height="170"/> </a></center> </td>
+<td><center><a href="https://lucacarlone.mit.edu/" target="_blank"> <img alt src="data/luca.png" height="170"/> </a></center> </td>
+<td><center><a href="https://www.cs.sfu.ca/~haoz/" target="_blank"> <img alt src="data/richard.png" height="170"/> </a></center> </td>
+<td><center><a href="https://geometry.stanford.edu/member/guibas/index.html" target="_blank"> <img alt src="data/leo.jpeg" height="170"/> </a></center> </td>
+</tr>
+<tr>
+<td> <center> <h3>  </h3> </center></td>
+<td> <center> <h3> Evangelos Kalogerakis </h3> </center></td>
+<td> <center> <h3> Luca Carlone </h3> </center></td>
+<td> <center> <h3> Richard Hao Zhang </h3> </center></td>
+<td> <center> <h3> Leonidas Guibas </h3> </center></td>
+</tr>
+<tr>
+<td> <center> <font size= "2"> UMass Amherst </font></center> </td>
+<td> <center> <font size= "2"> MIT </font></center> </td>
+<td> <center> <font size= "2"> Simon Fraser Univ. </font></center> </td>
+<td> <center> <font size= "2"> Stanford Univ. </font></center> </td>
+</tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+
+</p>
+</table>
+</center>
+
+
+<h2 id="contact">Contact Info</h2>
+<p>E-mail: 
+<a href="mailto:kmo@nvidia.com" target="_blank">kmo@nvidia.com</a>
+</p>
+
+<h2 id="contact">Acknowledgements</h2>
+<p>Website template borrowed from: 
+<a href="https://futurecv.github.io/" target="_blank">https://futurecv.github.io/</a>
+(Thanks to <a href="https://www.cs.cmu.edu/~dpathak/" target="_blank">Deepak Pathak</a>)
+</p>
+
+
+<div style="clear: both;">&nbsp;</div>
+</div><br><br>
+
+</body>
+</html>
