@@ -1,0 +1,564 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <link rel="icon" type="image/png" href="data/logo_icon.png">
+    <title>CVPR23 StruCo3D Workshop</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link href="data/default.css" rel="stylesheet" type="text/css" />
+    <meta property='og:title' content='CVPR23 StruCo3D Workshop: Structural and Compositional Learning on 3D Data'/>
+    <meta property='og:url' content='https://StruCo3D.github.io/cvpr2023' />
+    <meta property='og:image' content='https://StruCo3D.github.io/cvpr2023/data/logo_full.png' />
+    <meta property="og:type" content="website" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function moreOrLess(tableData) {
+            obj = tableData.find("span");
+            button = tableData.find("button");
+            console.log(obj.hasClass("hidden"))
+            if (obj.hasClass("hidden")) {
+                obj.slideDown("fast");
+                obj.removeClass("hidden");
+                button.html("Hide Abstract");
+            } else {
+                obj.slideUp("fast");
+                obj.addClass("hidden");
+                button.html("Show Abstract");
+            }
+        }
+    </script>
+  </head>
+
+  <body>
+    <div id="header">
+      <div id="logo">
+	<h1>
+		<center>
+	    	 <span style="font-size:50%;color:#777;font-weight:normal">The Second Workshop on</span><br>
+             Structural and Compositional Learning on 3D Data
+		</center>
+	</h1><br>
+	<h2>
+		<center>
+      <span style="font-size:92%;color:#777;font-weight:normal">Jun 18 (Sun) Morning @ 
+          <a href="http://cvpr2023.thecvf.com" target="_blank">CVPR 2023</a> 
+      <span style="font-size:92%;color:#777;font-weight:bold">Vancouver (Canada)</span>
+		</center>
+	</h2><br>
+	</div>
+
+  <div id="menu">
+    <center>
+      <ul>
+        <li class="first"><a href="./index.html" accesskey="1">Home</a></li>
+      </ul>
+    </center>
+</div>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              mybutton.style.display = "block";
+                } else {
+                        mybutton.style.display = "none";
+                          }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+      document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+}
+</script>
+
+        <div id="content">
+            <h2>Archival Workshop Publications 
+            <!-- <a href="" target="_blank">[CVF Official Archive]</a> -->
+                </h2>
+            <table>
+                <tr class="row_type_B">
+                    <td width="20px" , class="paper_id">1</td>
+                    <td width="200px">
+                        <div style="text-align: center;">
+                            <strong><span class="author">
+                                Moritz Ibing, Gregor Kobsik, Leif Kobbelt
+                              </span></strong>
+                                RWTH Aachen University
+                        </div>
+                        <div style="text-align: center;">
+                            <a href="./papers/01.pdf
+                              " target="_blank">[PDF]</a>
+                            <a href="./papers/01-supp.pdf
+                              " target="_blank">[Supp]</a>
+                            <a href="
+                              " target="_blank">[Video]</a>
+                        </div>
+                    </td>
+                    <td id="paper01">
+                        <p class="poster_title">
+                                Octree Transformer: Autoregressive 3D Shape Generation on Hierarchically Structured Sequences
+                        </p>
+                        <span class="hidden">
+                            <p><strong>Abstract:</strong>
+                              Autoregressive models have proven to be very powerful
+in NLP text generation tasks and lately have gained popularity for image generation as well. However, they have
+seen limited use for the synthesis of 3D shapes so far. This is
+mainly due to the lack of a straightforward way to linearize
+3D data as well as to scaling problems with the length of
+the resulting sequences when describing complex shapes. In
+this work we address both of these problems. We use octrees
+as a compact hierarchical shape representation that can be
+sequentialized by traversal ordering. Moreover, we introduce an adaptive compression scheme, that significantly reduces sequence lengths and thus enables their effective generation with a transformer, while still allowing fully autoregressive sampling and parallel training. We demonstrate
+the performance of our model by performing superresolution and comparing against the state-of-the-art in shape
+generation.
+                            </p>
+                        </span>
+                        <div style="text-align: center;">
+                            <button onclick="moreOrLess($('#paper01'))">Show Abstract</button>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr class="row_type_A">
+                    <td width="20px" , class="paper_id">2</td>
+                    <td width="200px">
+                        <div style="text-align: center;">
+                            <strong><span class="author">
+                                Reza Asad, Manolis Savva
+                              </span></strong>
+                              Simon Fraser University
+                        </div>
+                        <div style="text-align: center;">
+                            <a href="./papers/02.pdf
+                              " target="_blank">[PDF]</a>
+                            <a href="./papers/02-supp.zip
+                              " target="_blank">[Supp]</a>
+                            <a href="
+                              " target="_blank">[Video]</a>
+                        </div>
+                    </td>
+                    <td id="paper02">
+                        <p class="poster_title">
+                          3DSSR: 3D Subscene Retrieval
+                        </p>
+                        <span class="hidden">
+                            <p><strong>Abstract:</strong>
+                              We present the task of 3D subscene retrieval (3DSSR). In
+this task a user specifies a query object and a set of context
+objects in a 3D scene. Then, a system retrieves and ranks
+subscenes from a database of 3D scenes that best correspond to the configuration defined by the query. This formulation generalizes prior work on context-based 3D object retrieval and 3D scene retrieval. To tackle this task we
+present POINTCROP: a self-supervised point cloud encoder
+training scheme that enables retrieval of geometrically similar subscenes without relying on object category supervision. We evaluate POINTCROP against alternative methods and baselines through a suite of evaluation metrics that
+measure the degree of subscene correspondence. Our experiments show that POINTCROP training outperforms supervised and prior self-supervised training paradigms by
+4.33% and 9.11% in mAP respectively.
+                            </p>
+                        </span>
+                        <div style="text-align: center;">
+                            <button onclick="moreOrLess($('#paper02'))">Show Abstract</button>
+                        </div>
+                    </td>
+                </tr>
+ 
+                <tr class="row_type_B">
+                    <td width="20px" , class="paper_id">3</td>
+                    <td width="200px">
+                        <div style="text-align: center;">
+                            <strong><span class="author">
+                                Chengzhi Wu, Junwei Zheng, Julius Pfrommer, Jurgen Beyerer
+                              </span></strong>
+                              Karlsruhe Institute of Technology, Fraunhofer IOSB, Fraunhofer Center for Machine Learning
+                        </div>
+                        <div style="text-align: center;">
+                            <a href="./papers/03.pdf
+                              " target="_blank">[PDF]</a>
+                            <a href="./papers/03-supp.pdf
+                              " target="_blank">[Supp]</a>
+                            <a href="
+                              " target="_blank">[Video]</a>
+                        </div>
+                    </td>
+                    <td id="paper03">
+                        <p class="poster_title">
+                          Attention-based Part Assembly for 3D Volumetric Shape Modeling
+                        </p>
+                        <span class="hidden">
+                            <p><strong>Abstract:</strong>
+                              Modeling a 3D volumetric shape as an assembly of decomposed shape parts is much more challenging, but semantically more valuable than direct reconstruction from
+a full shape representation. The neural network needs to
+implicitly learn part relations coherently, which is typically performed by dedicated network layers that can generate transformation matrices for each part. In this paper, we propose a VoxAttention network architecture for
+attention-based part assembly. We further propose a variant of using channel-wise part attention and show the advantages of this approach. Experimental results show that
+our method outperforms most state-of-the-art methods for
+the part relation-aware 3D shape modeling task.
+                            </p>
+                        </span>
+                        <div style="text-align: center;">
+                            <button onclick="moreOrLess($('#paper03'))">Show Abstract</button>
+                        </div>
+                    </td>
+                </tr>
+ 
+                <tr class="row_type_A">
+                   <td width="20px" , class="paper_id">4</td>
+                    <td width="200px">
+                        <div style="text-align: center;">
+                            <strong><span class="author">
+                                Kseniya Cherenkova, Elona Dupont, Anis Kacem, Ilya Arzhannikov, Gleb A Gusev, Djamila Aouada
+                              </span></strong>
+                              SnT, University of Luxembourg, Artec 3D
+                        </div>
+                        <div style="text-align: center;">
+                            <a href="./papers/04.pdf
+                              " target="_blank">[PDF]</a>
+                            <a href="
+                              " target="_blank">[Video]</a>
+                        </div>
+                    </td>
+                    <td id="paper04">
+                        <p class="poster_title">
+                          SepicNet: Sharp Edges Recovery by Parametric Inference of Curves in 3D Shapes
+                        </p>
+                        <span class="hidden">
+                            <p><strong>Abstract:</strong>
+                              3D scanning as a technique to digitize objects in reality and create their 3D models, is used in many fields and
+areas. Though the quality of 3D scans depends on the technical characteristics of the 3D scanner, the common drawback is the smoothing of fine details, or the edges of an object. We introduce SepicNet, a novel deep network for the
+detection and parametrization of sharp edges in 3D shapes
+as primitive curves. To make the network end-to-end trainable, we formulate the curve fitting in a differentiable manner. We develop an adaptive point cloud sampling technique that captures the sharp features better than uniform
+sampling. The experiments were conducted on a newly introduced large-scale dataset of 50k 3D scans, where the
+sharp edge annotations were extracted from their parametric CAD models, and demonstrate significant improvement
+over state-of-the-art methods.
+                            </p>
+                        </span>
+                        <div style="text-align: center;">
+                            <button onclick="moreOrLess($('#paper04'))">Show Abstract</button>
+                        </div>
+                    </td>
+                </tr>
+ 
+                 <tr class="row_type_B">
+                    <td width="20px" , class="paper_id">5</td>
+                    <td width="200px">
+                        <div style="text-align: center;">
+                            <strong><span class="author">
+                                Ramesh Ashok, Tabib Nitishkumar, Upasi Tejas, Anvekar Dikshit, Hegde Uma Mudenagudi
+                              </span></strong>
+                              KLE Technological University
+                        </div>
+                        <div style="text-align: center;">
+                            <a href="./papers/05.pdf
+                              " target="_blank">[PDF]</a>
+                            <a href="
+                              " target="_blank">[Video]</a>
+                        </div>
+                    </td>
+                    <td id="paper05">
+                        <p class="poster_title">
+                          IPD-Net: SO(3) Invariant Primitive Decompositional Network for 3D Point Clouds
+                        </p>
+                        <span class="hidden">
+                            <p><strong>Abstract:</strong>
+                              In this paper, we propose IPD-Net: Invariant Primitive Decompositional Network, a SO(3) invariant framework for decomposition of a point cloud. The human cognitive system is able to identify and interpret familiar objects regardless of their orientation and abstraction. Recent research aims to bring this capability to machines for
+understanding the 3D world. In this work, we present a
+framework inspired by human cognition to decompose point
+clouds into four primitive 3D shapes (plane, cylinder, cone,
+and sphere) and enable machines to understand the objects
+irrespective of its orientations. We employ Implicit Invariant Features (IIF) to learn local geometric relations by implicitly representing the point cloud with enhanced geometric information invariant towards SO(3) rotations. We also
+use Spatial Rectification Unit (SRU) to extract invariant
+global signatures. We demonstrate the results of our proposed methodology for SO(3) invariant decomposition on
+TraceParts Dataset, and show the generalizability of proposed IPD-Net as plugin for downstream task on classification of point clouds. We compare the results of classification
+with state-of-the-art methods on benchmark dataset (ModelNet40).
+                            </p>
+                        </span>
+                        <div style="text-align: center;">
+                            <button onclick="moreOrLess($('#paper05'))">Show Abstract</button>
+                        </div>
+                    </td>
+                </tr>
+                                
+            </table>
+               
+                 
+            <h2>Non-archival Paper Presentations</h2>
+            <table>
+              
+                 <tr class="row_type_B">
+                    <td width="20px" , class="paper_id">6</td>
+                    <td width="200px">
+                        <div style="text-align: center;">
+                            <strong><span class="author">
+                                Haoran Geng, Helin Xu, Chengyang Zhao, Chao Xu, Li Yi, Siyuan Huang, He Wang
+                              </span></strong>
+                              Peking University, Beijing Institute for General Artificial Intelligence, Tsinghua University, University of California, Los Angeles
+                        </div>
+                        <div style="text-align: center;">
+                            <a href="./papers/06.pdf
+                              " target="_blank">[PDF]</a>
+                            <a href="./papers/06-supp.pdf
+                              " target="_blank">[Supp]</a>
+                            <a href="
+                              " target="_blank">[Video]</a>
+                        </div>
+                    </td>
+                    <td id="paper06">
+                        <p class="poster_title">
+                          GAPartNet: Cross-Category Domain-Generalizable Object Perception and Manipulation via Generalizable and Actionable Parts
+                        </p>
+                        <span class="hidden">
+                            <p><strong>Abstract:</strong>
+                              For years, researchers have been devoted to generalizable object perception and manipulation, where crosscategory generalizability is highly desired yet underexplored. In this work, we propose to learn such crosscategory skills via Generalizable and Actionable Parts
+(GAParts). By identifying and defining 9 GAPart classes
+(lids, handles, etc.) in 27 object categories, we construct
+a large-scale part-centric interactive dataset, GAPartNet,
+where we provide rich, part-level annotations (semantics,
+poses) for 8,489 part instances on 1,166 objects. Based on
+GAPartNet, we investigate three cross-category tasks: part
+segmentation, part pose estimation, and part-based object
+manipulation. Given the significant domain gaps between
+seen and unseen object categories, we propose a robust 3D
+segmentation method from the perspective of domain generalization by integrating adversarial learning techniques.
+Our method outperforms all existing methods by a large
+margin, no matter on seen or unseen categories. Furthermore, with part segmentation and pose estimation results,
+we leverage the GAPart pose definition to design part-based
+manipulation heuristics that can generalize well to unseen
+object categories in both the simulator and the real world.
+                            </p>
+                        </span>
+                        <div style="text-align: center;">
+                            <button onclick="moreOrLess($('#paper06'))">Show Abstract</button>
+                        </div>
+                    </td>
+                </tr>
+                                
+                 <tr class="row_type_A">
+                    <td width="20px" , class="paper_id">7</td>
+                    <td width="200px">
+                        <div style="text-align: center;">
+                            <strong><span class="author">
+                                Sergey Zakharov, Rares¸ Ambrus¸, Katherine Liu, Adrien Gaidon
+                              </span></strong>
+                              Toyota Research Institute
+                        </div>
+                        <div style="text-align: center;">
+                            <a href="./papers/07.pdf
+                              " target="_blank">[PDF]</a>
+                            <a href="
+                              " target="_blank">[Video]</a>
+                        </div>
+                    </td>
+                    <td id="paper07">
+                        <p class="poster_title">
+                          ROAD: Learning an Implicit Recursive Octree Auto-Decoder to Efficiently Encode 3D Shapes
+                        </p>
+                        <span class="hidden">
+                            <p><strong>Abstract:</strong>
+                              Compact and accurate representations of 3D shapes are
+central to many perception and robotics tasks. State-of-theart learning-based methods can reconstruct single objects
+but scale poorly to large datasets. We present a novel recursive implicit representation to efficiently and accurately
+encode large datasets of complex 3D shapes by recursively
+traversing an implicit octree in latent space. Our implicit
+Recursive Octree Auto-Decoder (ROAD) learns a hierarchically structured latent space enabling state-of-the-art reconstruction results at a compression ratio above 99%. We
+also propose an efficient curriculum learning scheme that
+naturally exploits the coarse-to-fine properties of the underlying octree spatial representation. We explore the scaling
+law relating latent space dimension, dataset size, and reconstruction accuracy, showing that increasing the latent
+space dimension is enough to scale to large shape datasets.
+Finally, we show that our learned latent space encodes a
+coarse-to-fine hierarchical structure yielding reusable latents across different levels of details, and we provide qualitative evidence of generalization to novel shapes outside
+the training set.
+                            </p>
+                        </span>
+                        <div style="text-align: center;">
+                            <button onclick="moreOrLess($('#paper07'))">Show Abstract</button>
+                        </div>
+                    </td>
+                </tr>
+                                
+                 <tr class="row_type_B">
+                    <td width="20px" , class="paper_id">8</td>
+                    <td width="200px">
+                        <div style="text-align: center;">
+                            <strong><span class="author">
+                                Purva Tendulkar, Didac Suris Coll-Vinent, Carl Vondrick
+                              </span></strong>
+                              Columbia University
+                        </div>
+                        <div style="text-align: center;">
+                            <a href="
+                              " target="_blank">[PDF]</a>
+                            <a href="
+                              " target="_blank">[Video]</a>
+                        </div>
+                    </td>
+                    <td id="paper08">
+                        <p class="poster_title">
+                          FLEX: Full-Body Grasping Without Full-Body Grasps
+                        </p>
+                        <span class="hidden">
+                            <p><strong>Abstract:</strong>
+                              Synthesizing 3D human avatars interacting realistically with a scene is an important problem with applications in AR/VR, video games and robotics. Towards this goal, we address the task of generating a virtual human -- hands and full body -- grasping everyday objects. Existing methods approach this problem by collecting a 3D dataset of humans interacting with objects and training on this data. However, 1) these methods do not generalize to different object positions and orientations, or to the presence of furniture in the scene, and 2) the diversity of their generated full-body poses is very limited. In this work, we address all the above challenges to generate realistic, diverse full-body grasps in everyday scenes without requiring any 3D full-body grasping data. Our key insight is to leverage the existence of both full-body pose and hand grasping priors, composing them using 3D geometrical constraints to obtain full-body grasps. We empirically validate that these constraints can generate a variety of feasible human grasps that are superior to baselines both quantitatively and qualitatively.
+                            </p>
+                        </span>
+                        <div style="text-align: center;">
+                            <button onclick="moreOrLess($('#paper08'))">Show Abstract</button>
+                        </div>
+                    </td>
+                </tr>
+                                
+                 <tr class="row_type_A">
+                    <td width="20px" , class="paper_id">9</td>
+                    <td width="200px">
+                        <div style="text-align: center;">
+                            <strong><span class="author">
+                                Liquan Wang
+                              </span></strong>
+                              University of Toronto
+                        </div>
+                        <div style="text-align: center;">
+                            <a href="
+                              " target="_blank">[PDF]</a>
+                            <a href="
+                              " target="_blank">[Video]</a>
+                        </div>
+                    </td>
+                    <td id="paper09">
+                        <p class="poster_title">
+                          Self-Supervised Learning of Action Affordances as Interaction Modes
+                        </p>
+                        <span class="hidden">
+                            <p><strong>Abstract:</strong>
+                              When humans perform a task with an articulated object, they interact with the object only in a handful of ways, while the space of all possible interactions is nearly endless. This is because humans have prior knowledge about what interactions are likely to be successful, i.e., to open a new door we first try the handle. While learning such priors without supervision is easy for humans, it is notoriously hard for machines. In this work, we tackle unsupervised learning of priors of useful interactions with articulated objects, which we call interaction modes. In contrast to the prior art, we use no supervision or privileged information; we only assume access to the depth sensor in the simulator to learn the interaction modes. More precisely, we define a successful interaction as the one changing the visual environment substantially and learn a generative model of such interactions, that can be conditioned on the desired goal state of the object. In our experiments, we show that our model covers most of the human interaction modes, outperforms existing state-of-the-art methods for affordance learning, and can generalize to objects never seen during training. Additionally, we show promising results in the goal-conditional setup, where our model can be quickly fine-tuned to perform a given task. We show in the experiments that such affordance learning predicts interaction which covers most modes of interaction for the querying articulated object and can be fine-tuned to a goal-conditional model.
+                            </p>
+                        </span>
+                        <div style="text-align: center;">
+                            <button onclick="moreOrLess($('#paper09'))">Show Abstract</button>
+                        </div>
+                    </td>
+                </tr>
+                                
+                 <tr class="row_type_B">
+                    <td width="20px" , class="paper_id">10</td>
+                    <td width="200px">
+                        <div style="text-align: center;">
+                            <strong><span class="author">
+                                Konstantinos Tertikas, Despoina Paschalidou, Boxiao Pan, Jeong Joon Park, Mikaela Angelina Uy, Ioannis Emiris, Yannis Avrithis, Leonidas Guibas
+                              </span></strong>
+                              National and Kapodistrian University of Athens, MPI-IS Tuebingen, Stanford University, Athena Research Center, IARAI
+                        </div>
+                        <div style="text-align: center;">
+                            <a href="
+                              " target="_blank">[PDF]</a>
+                            <a href="
+                              " target="_blank">[Video]</a>
+                        </div>
+                    </td>
+                    <td id="paper10">
+                        <p class="poster_title">
+                          PartNeRF: Generating Part-Aware Editable 3D Shapes without 3D Supervision
+                        </p>
+                        <span class="hidden">
+                            <p><strong>Abstract:</strong>
+                              Impressive progress in generative models and implicit representations gave rise to methods that can generate 3D shapes of high quality. However, being able to locally control and edit shapes is another essential property that can unlock several content creation applications. Local control can be achieved with part-aware models, but existing methods require 3D supervision and cannot produce textures. In this work, we devise PartNeRF, a novel part-aware generative model for editable 3D shape synthesis that does not require any explicit 3D supervision. Our model generates objects as a set of locally defined NeRFs, augmented with an affine transformation. This enables several editing operations such as applying transformations on parts, mixing parts from different objects etc. To ensure distinct, manipulable parts we enforce a hard assignment of rays to parts that makes sure that the color of each ray is only determined by a single NeRF. As a result, altering one part does not affect the appearance of the others. Evaluations on various ShapeNet categories demonstrate the ability of our model to generate editable 3D objects of improved fidelity, compared to previous part-based generative approaches that require 3D supervision or models relying on NeRFs.
+                            </p>
+                        </span>
+                        <div style="text-align: center;">
+                            <button onclick="moreOrLess($('#paper10'))">Show Abstract</button>
+                        </div>
+                    </td>
+                </tr>
+                                
+                 <tr class="row_type_A">
+                    <td width="20px" , class="paper_id">11</td>
+                    <td width="200px">
+                        <div style="text-align: center;">
+                            <strong><span class="author">
+                                Muhammad Jehanzeb Mirza, Inkyu Shin, Wei Lin, Andreas Schriebl, Jaesung Choe
+                              </span></strong>
+                              Technical University of Graz, KAIST
+                        </div>
+                        <div style="text-align: center;">
+                            <a href="
+                              " target="_blank">[PDF]</a>
+                            <a href="
+                              " target="_blank">[Video]</a>
+                        </div>
+                    </td>
+                    <td id="paper11">
+                        <p class="poster_title">
+                          MATE: Masked Autoencoders are Online 3D Test-Time Learners
+                        </p>
+                        <span class="hidden">
+                            <p><strong>Abstract:</strong>
+                              Our MATE is the first Test-Time-Training (TTT) method designed for 3D data, which makes deep networks trained for point cloud classification robust to distribution shifts occurring in test data. Like existing TTT methods from the 2D image domain,
+MATE also leverages test data for adaptation. Its test-time objective is that of a Masked Autoencoder: a large portion of each test point cloud is removed before it is fed to the network, tasked with reconstructing the full point cloud. Once the network is updated, it is used to classify the point cloud. We test MATE on several 3D object classification datasets and show that it significantly improves robustness of deep networks to several types of corruptions commonly occurring in 3D point clouds. We show that MATE is very efficient in terms of the fraction of points it needs for the adaptation. It can effectively adapt given as few as 5% of tokens of each test sample, making it extremely lightweight.
+                            </p>
+                        </span>
+                        <div style="text-align: center;">
+                            <button onclick="moreOrLess($('#paper11'))">Show Abstract</button>
+                        </div>
+                    </td>
+                </tr>
+                                
+                 <tr class="row_type_B">
+                    <td width="20px" , class="paper_id">12</td>
+                    <td width="200px">
+                        <div style="text-align: center;">
+                            <strong><span class="author">
+                                Yujia Liu, Anton Obukhov, Jan Dirk Wegner, Konrad Schindler
+                              </span></strong>
+                              ETH Zurich, University of Zurich
+                        </div>
+                        <div style="text-align: center;">
+                            <a href="./papers/12.pdf
+                              " target="_blank">[PDF]</a>
+                            <a href="
+                              " target="_blank">[Video]</a>
+                        </div>
+                    </td>
+                    <td id="paper12">
+                        <p class="poster_title">
+                          Point2CAD: Reverse Engineering CAD Models from 3D Point Clouds
+                        </p>
+                        <span class="hidden">
+                            <p><strong>Abstract:</strong>
+                              Computer-Aided Design (CAD) model reconstruction
+from point clouds is an important problem at the intersection
+of computer vision, graphics, and machine learning. Recent advancements in this direction achieve rather reliable
+semantic segmentation but still struggle to produce an adequate topology of the CAD model. We propose a hybrid
+analytic-neural reconstruction scheme that bridges the gap
+between segmented point clouds and structured CAD models.
+To power the surface fitting stage, we propose a novel implicit neural representation of freeform surfaces, driving up
+the performance of our overall CAD reconstruction scheme.
+We evaluate our method on the ABC benchmark of CAD
+models and set a new state-of-the-art for that dataset.
+                            </p>
+                        </span>
+                        <div style="text-align: center;">
+                            <button onclick="moreOrLess($('#paper12'))">Show Abstract</button>
+                        </div>
+                    </td>
+                </tr>
+                                
+            </table>
+
+<h2 id="contact">Contact Info</h2>
+<p>E-mail: 
+<a href="mailto:kmo@nvidia.com" target="_blank">kmo@nvidia.com</a>
+</p>
+
+<h2 id="contact">Acknowledgements</h2>
+<p>Website template borrowed from: 
+<a href="https://futurecv.github.io/" target="_blank">https://futurecv.github.io/</a>
+(Thanks to <a href="https://www.cs.cmu.edu/~dpathak/" target="_blank">Deepak Pathak</a>)
+</p>
+
+<div style="clear: both;">&nbsp;</div>
+</div><br><br>
+
+</body>
+
+</html>

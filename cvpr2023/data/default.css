@@ -246,20 +246,23 @@ table#program td:nth-child(1) {
     width: 110px;
 } */
 
-tr.row_type_A {
+tr.row_type_B {
 	background-color: #EEE;
 }
-tr.row_type_B {
+tr.row_type_A {
 	background-color: #FFF;
 }
 tr.row_type_C {
-	background-color: #A52A2A;
+	background-color: #EC5600;
 }
 tr.row_type_D {
 	background-color: #5F9EA0;
 }
+tr.row_type_E {
+	background-color: #00649b;
+}
 tr.block {
-    background-color: #00649b;
+    background-color: #EC5600;
     color: #fff;
 }
 tr.row_type_A td {
@@ -272,6 +275,9 @@ tr.row_type_C td {
 	padding: 10px 10px;
 }
 tr.row_type_D td {
+	padding: 10px 10px;
+}
+tr.row_type_E td {
 	padding: 10px 10px;
 }
 td.paper_id {

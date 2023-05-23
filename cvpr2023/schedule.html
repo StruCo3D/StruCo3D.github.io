@@ -1,0 +1,324 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <link rel="icon" type="image/png" href="data/logo_icon.png">
+    <title>CVPR23 StruCo3D Workshop</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link href="data/default.css" rel="stylesheet" type="text/css" />
+    <meta property='og:title' content='CVPR23 StruCo3D Workshop: Structural and Compositional Learning on 3D Data'/>
+    <meta property='og:url' content='https://StruCo3D.github.io/cvpr2023' />
+    <meta property='og:image' content='https://StruCo3D.github.io/cvpr2023/data/logo_full.png' />
+    <meta property="og:type" content="website" />
+  </head>
+
+  <body>
+    <div id="header">
+      <div id="logo">
+	<h1>
+		<center>
+	    	 <span style="font-size:50%;color:#777;font-weight:normal">The Second Workshop on</span><br>
+             Structural and Compositional Learning on 3D Data
+		</center>
+	</h1><br>
+	<h2>
+		<center>
+      <span style="font-size:92%;color:#777;font-weight:normal">Jun 18 (Sun) Morning @ 
+          <a href="http://cvpr2023.thecvf.com" target="_blank">CVPR 2023</a> 
+      <span style="font-size:92%;color:#777;font-weight:bold">Vancouver (Canada)</span>
+		</center>
+	</h2><br>
+	</div>
+
+  <div id="menu">
+    <center>
+      <ul>
+        <li class="first"><a href="./index.html" accesskey="1">Home</a></li>
+      </ul>
+    </center>
+</div>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              mybutton.style.display = "block";
+                } else {
+                        mybutton.style.display = "none";
+                          }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+      document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+}
+</script>
+
+
+<div id="content">
+  <div id="tz_select">
+     <p><h2 style="color:red;">Select your time zone<br>Default: Pacific Daylight Time</h2></p>
+    <select class="form-control"></select>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./tz_selector/timezones.full.js"></script>
+        <script>
+          function setTimezone(tz) {
+            options = {
+              timeZone: tz, 
+              month: 'short',
+              day: 'numeric',
+              hour: '2-digit', 
+              minute: '2-digit' 
+            }
+            block_options = {
+              timeZone: tz, 
+              month: 'short',
+              day: 'numeric',
+              hour: '2-digit', 
+              minute: '2-digit' 
+            }
+            schedule = {
+              "#intro_start" : new Date(Date.parse("18 Jun 2023 07:50:00 PDT")),
+              "#intro_end": new Date(Date.parse("18 Jun 2023 08:00:00 PDT")),
+              
+              "#keynote1_start" : new Date(Date.parse("18 Jun 2023 08:00:00 PDT")),
+              "#keynote1_end": new Date(Date.parse("18 Jun 2023 08:30:00 PDT")),
+
+              "#keynote2_start" : new Date(Date.parse("18 Jun 2023 08:30:00 PDT")),
+              "#keynote2_end": new Date(Date.parse("18 Jun 2023 09:00:00 PDT")),
+
+              "#keynote3_start" : new Date(Date.parse("18 Jun 2023 10:20:00 PDT")),
+              "#keynote3_end": new Date(Date.parse("18 Jun 2023 10:50:00 PDT")),
+
+              "#keynote4_start" : new Date(Date.parse("18 Jun 2023 11:10:00 PDT")),
+              "#keynote4_end": new Date(Date.parse("18 Jun 2023 11:40:00 PDT")),
+              
+              "#spotlight1_start" : new Date(Date.parse("18 Jun 2023 09:00:00 PDT")),
+              "#spotlight1_end" : new Date(Date.parse("18 Jun 2023 09:10:00 PDT")),
+              
+              "#spotlight2_start" : new Date(Date.parse("18 Jun 2023 09:10:00 PDT")),
+              "#spotlight2_end" : new Date(Date.parse("18 Jun 2023 09:20:00 PDT")),
+              
+              "#spotlight3_start" : new Date(Date.parse("18 Jun 2023 09:20:00 PDT")),
+              "#spotlight3_end" : new Date(Date.parse("18 Jun 2023 09:30:00 PDT")),
+              
+              "#spotlight4_start" : new Date(Date.parse("18 Jun 2023 09:30:00 PDT")),
+              "#spotlight4_end" : new Date(Date.parse("18 Jun 2023 09:40:00 PDT")),
+              
+              "#spotlight5_start" : new Date(Date.parse("18 Jun 2023 09:40:00 PDT")),
+              "#spotlight5_end" : new Date(Date.parse("18 Jun 2023 09:50:00 PDT")),
+              
+              "#spotlight6_start" : new Date(Date.parse("18 Jun 2023 09:50:00 PDT")),
+              "#spotlight6_end" : new Date(Date.parse("18 Jun 2023 10:00:00 PDT")),
+              
+              "#paperpre_start" : new Date(Date.parse("18 Jun 2023 10:00:00 PDT")),
+              "#paperpre_end" : new Date(Date.parse("18 Jun 2023 10:20:00 PDT")),
+              
+              "#buildingnet_start" : new Date(Date.parse("18 Jun 2023 10:50:00 PDT")),
+              "#buildingnet_end" : new Date(Date.parse("18 Jun 2023 11:10:00 PDT")),
+              
+              "#poster_start" : new Date(Date.parse("18 Jun 2023 11:40:00 PDT")),
+              "#poster_end" : new Date(Date.parse("18 Jun 2023 12:30:00 PDT")),
+            }
+            blocks = {
+              "#spotlights_start" : new Date(Date.parse("18 Jun 2023 09:00:00 PDT")),
+              "#spotlights_end" : new Date(Date.parse("18 Jun 2023 10:00:00 PDT")),
+            }
+            var keys = Object.keys(schedule)
+            for (var i = 0; i < keys.length; ++i) {
+              $(keys[i]).html(schedule[keys[i]].toLocaleString(navigator.language, options))
+            }
+            var keys = Object.keys(blocks)
+            for (var i = 0; i < keys.length; ++i) {
+              $(keys[i]).html("<b>" + blocks[keys[i]].toLocaleString(navigator.language, block_options) + "</b>")
+            }
+          }
+          $('select').timezones();
+          $('select').change(function() {
+            setTimezone($('select').val())
+          });
+          $(document).ready(function() {
+            setTimezone($('select').val())
+          })
+      </script>
+
+<table class="schedule" id="program">
+  <tr class="row_type_B">
+    <td width="80px">
+	    <b>Start</b>
+    </td>
+    <td width="80px">
+      <b>End</b>
+    </td>
+    <td>
+	    <b>Event</b>
+    </td>
+  </tr>
+  
+  <tr class="row_type_E">
+    <td id="intro_start"></td>
+    <td id="intro_end"></td>
+    <td>
+	    <p class="poster_title">Welcome and Introductions</p>
+		Workshop Organizers
+    </td>
+  </tr>
+
+  <tr class="row_type_D">
+    <td id="keynote1_start"></td>
+    <td id="keynote1_end"></td>
+    <td>
+        <table><tr><td style="border: none"><a href="https://www.microsoft.com/en-us/research/people/xtong/" target="_blank"> <img alt src="data/xin.jpeg" height="140"/></a></td>
+        <td style="border: none"><p class="poster_title">[Keynote] Title</p><br>
+            Xin Tong (Microsoft Research Asia)</td></tr></table>
+    </td>
+  </tr>
+ 
+  <tr class="row_type_D">
+    <td id="keynote2_start"></td>
+    <td id="keynote2_end"></td>
+    <td>
+        <table><tr><td style="border: none"><a href="https://taiya.github.io/" target="_blank"> <img alt src="data/andrea.png" height="140"/></a></td>
+        <td style="border: none"><p class="poster_title">[Keynote] Title</p><br>
+            Andrea Tagliasacchi (SFU &#38; Google Brain)</td></tr></table>
+    </td>
+  </tr>
+ 
+  <tr class="block">
+    <td id="spotlights_start"></td>
+    <td id="spotlights_end"></td>
+    <td><b> Spotlight Presentations </b>
+    </td>
+  </tr>
+
+  <tr class="row_type_A">
+    <td id="spotlight1_start"></td>
+    <td id="spotlight1_end"></td>
+    <td>
+        <table><tr><td style="border: none"><a href="https://sites.google.com/view/ehsanik-personal-website?pli=1" target="_blank"> <img alt src="data/kiana.png" height="140"/></a></td>
+        <td style="border: none"><p class="poster_title">[Spotlight] Title</p><br>
+            Kiana Ehsani (Allen Institute for AI)</td></tr></table>
+    </td>
+  </tr>
+
+  <tr class="row_type_B">
+    <td id="spotlight2_start"></td>
+    <td id="spotlight2_end"></td>
+    <td>
+        <table><tr><td style="border: none"><a href="https://fxia22.github.io/" target="_blank"> <img alt src="data/fei.jpeg" height="140"/></a></td>
+        <td style="border: none"><p class="poster_title">[Spotlight] Title</p><br>
+           Fei Xia (Google Deepmind)</td></tr></table>
+    </td>
+  </tr>
+
+  <tr class="row_type_A">
+    <td id="spotlight3_start"></td>
+    <td id="spotlight3_end"></td>
+    <td>
+        <table><tr><td style="border: none"><a href="http://www.cs.toronto.edu/~jungao/" target="_blank"> <img alt src="data/jun.jpeg" height="140"/></a></td>
+        <td style="border: none"><p class="poster_title">[Spotlight] Title</p><br>
+             Jun Gao (Univ. of Toronto &#38; NVIDIA Research)</td></tr></table>
+    </td>
+  </tr>
+
+  <tr class="row_type_B">
+    <td id="spotlight4_start"></td>
+    <td id="spotlight4_end"></td>
+    <td>
+        <table><tr><td style="border: none"><a href="https://amirhertz.github.io/" target="_blank"> <img alt src="data/amir.jpeg" height="140"/></a></td>
+        <td style="border: none"><p class="poster_title">[Spotlight] Title</p><br>
+            Amir Hertz (Tel-Aviv Univ.)</td></tr></table>
+    </td>
+  </tr>
+
+  <tr class="row_type_A">
+    <td id="spotlight5_start"></td>
+    <td id="spotlight5_end"></td>
+    <td>
+        <table><tr><td style="border: none"><a href="https://rkjones4.github.io/" target="_blank"> <img alt src="data/kenny.jpeg" height="140"/></a></td>
+        <td style="border: none"><p class="poster_title">[Spotlight] Title</p><br>
+            Kenny Jones (Brown Univ.) </td></tr></table>
+    </td>
+  </tr>
+
+  <tr class="row_type_B">
+    <td id="spotlight6_start"></td>
+    <td id="spotlight6_end"></td>
+    <td>
+        <table><tr><td style="border: none"><a href="https://mikacuy.github.io/" target="_blank"> <img alt src="data/mika.jpeg" height="140"/></a></td>
+        <td style="border: none"><p class="poster_title">[Spotlight] Title</p><br>
+            Mikaela Uy (Stanford) </td></tr></table>
+    </td>
+  </tr>
+
+  <tr class="row_type_C">
+    <td id="paperpre_start"></td>
+    <td id="paperpre_end"></td>
+    <td>
+        <p class="poster_title">Accepted Paper Presentation</p>
+    </td>
+  </tr>
+ 
+ <tr class="row_type_D">
+    <td id="keynote3_start"></td>
+    <td id="keynote3_end"></td>
+    <td>
+        <table><tr><td style="border: none"><a href="https://www.3dunderstanding.org/" target="_blank"> <img alt src="data/angela.jpeg" height="140"/></a></td>
+        <td style="border: none"><p class="poster_title">[Keynote] Title</p><br>
+            Angela Dai (TUM)</td></tr></table>
+    </td>
+  </tr>
+
+ <tr class="row_type_C">
+    <td id="buildingnet_start"></td>
+    <td id="buildingnet_end"></td>
+    <td>
+        <p class="poster_title">BuildingNet Challenge</p>
+    </td>
+  </tr>
+
+  <tr class="row_type_D">
+    <td id="keynote4_start"></td>
+    <td id="keynote4_end"></td>
+    <td>
+        <table><tr><td style="border: none"><a href="https://homes.cs.washington.edu/~fox/" target="_blank"> <img alt src="data/dieter.jpeg" height="140"/></a></td>
+        <td style="border: none"><p class="poster_title">[Keynote] Title</p><br>
+            Dieter Fox (UW &#38; NVIDIA Research)</td></tr></table>
+    </td>
+  </tr>
+  
+  <tr class="row_type_E">
+    <td id="poster_start"></td>
+    <td id="poster_end"></td>
+    <td>
+        <p class="poster_title">Conclusion &#38; Accepted Paper Poster Section</p>
+    </td>
+  </tr>
+ 
+  
+</table>
+
+<h2 id="contact">Contact Info</h2>
+<p>E-mail: 
+<a href="mailto:kmo@nvidia.com" target="_blank">kmo@nvidia.com</a>
+</p>
+
+<h2 id="contact">Acknowledgements</h2>
+<p>Website template borrowed from: 
+<a href="https://futurecv.github.io/" target="_blank">https://futurecv.github.io/</a>
+(Thanks to <a href="https://www.cs.cmu.edu/~dpathak/" target="_blank">Deepak Pathak</a>)
+</p>
+
+<div style="clear: both;">&nbsp;</div>
+</div><br><br>
+
+</body>
+</html>
